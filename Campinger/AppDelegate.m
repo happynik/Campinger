@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "WishListTableViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [UIWindow new];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [WishListTableViewController new];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

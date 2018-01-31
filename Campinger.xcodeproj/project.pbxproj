@@ -10,14 +10,12 @@
 		1EDED6CBDE64EAACF139ADEE /* libPods-Campinger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 420FBD8A19692F0D6AAC8A42 /* libPods-Campinger.a */; };
 		315D873022E5A4F5766758D4 /* libPods-CampingerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A15179749B29AE854BF7665 /* libPods-CampingerUITests.a */; };
 		6BCB7CF62017E4DF00E39770 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7CF52017E4DF00E39770 /* AppDelegate.m */; };
-		6BCB7CF92017E4DF00E39770 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7CF82017E4DF00E39770 /* ViewController.m */; };
-		6BCB7CFC2017E4DF00E39770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB7CFA2017E4DF00E39770 /* Main.storyboard */; };
 		6BCB7CFF2017E4DF00E39770 /* Campinger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7CFD2017E4DF00E39770 /* Campinger.xcdatamodeld */; };
 		6BCB7D012017E4DF00E39770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB7D002017E4DF00E39770 /* Assets.xcassets */; };
-		6BCB7D042017E4DF00E39770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB7D022017E4DF00E39770 /* LaunchScreen.storyboard */; };
 		6BCB7D072017E4DF00E39770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D062017E4DF00E39770 /* main.m */; };
 		6BCB7D112017E4DF00E39770 /* CampingerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D102017E4DF00E39770 /* CampingerTests.m */; };
 		6BCB7D1C2017E4DF00E39770 /* CampingerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D1B2017E4DF00E39770 /* CampingerUITests.m */; };
+		6BD6411220228789000C0B7A /* WishListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6411120228789000C0B7A /* WishListTableViewController.m */; };
 		90B59825C2CC0A472202FFC1 /* libPods-CampingerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C5A2D24B7F348791084541 /* libPods-CampingerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -48,12 +46,8 @@
 		6BCB7CF12017E4DF00E39770 /* Campinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Campinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCB7CF42017E4DF00E39770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6BCB7CF52017E4DF00E39770 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6BCB7CF72017E4DF00E39770 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6BCB7CF82017E4DF00E39770 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6BCB7CFB2017E4DF00E39770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BCB7CFE2017E4DF00E39770 /* Campinger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Campinger.xcdatamodel; sourceTree = "<group>"; };
 		6BCB7D002017E4DF00E39770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6BCB7D032017E4DF00E39770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BCB7D052017E4DF00E39770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BCB7D062017E4DF00E39770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BCB7D0C2017E4DF00E39770 /* CampingerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampingerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +56,8 @@
 		6BCB7D172017E4DF00E39770 /* CampingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCB7D1B2017E4DF00E39770 /* CampingerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampingerUITests.m; sourceTree = "<group>"; };
 		6BCB7D1D2017E4DF00E39770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BD6411020228789000C0B7A /* WishListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WishListTableViewController.h; sourceTree = "<group>"; };
+		6BD6411120228789000C0B7A /* WishListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WishListTableViewController.m; sourceTree = "<group>"; };
 		7505A00871810BABE9430636 /* Pods-Campinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Campinger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Campinger/Pods-Campinger.debug.xcconfig"; sourceTree = "<group>"; };
 		C39BDB28993309012F4F2F96 /* Pods-CampingerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampingerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampingerTests/Pods-CampingerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3C5A2D24B7F348791084541 /* libPods-CampingerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CampingerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,14 +118,12 @@
 			children = (
 				6BCB7CF42017E4DF00E39770 /* AppDelegate.h */,
 				6BCB7CF52017E4DF00E39770 /* AppDelegate.m */,
-				6BCB7CF72017E4DF00E39770 /* ViewController.h */,
-				6BCB7CF82017E4DF00E39770 /* ViewController.m */,
-				6BCB7CFA2017E4DF00E39770 /* Main.storyboard */,
 				6BCB7D002017E4DF00E39770 /* Assets.xcassets */,
-				6BCB7D022017E4DF00E39770 /* LaunchScreen.storyboard */,
 				6BCB7D052017E4DF00E39770 /* Info.plist */,
 				6BCB7D062017E4DF00E39770 /* main.m */,
 				6BCB7CFD2017E4DF00E39770 /* Campinger.xcdatamodeld */,
+				6BD6411020228789000C0B7A /* WishListTableViewController.h */,
+				6BD6411120228789000C0B7A /* WishListTableViewController.m */,
 			);
 			path = Campinger;
 			sourceTree = "<group>";
@@ -290,9 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BCB7D042017E4DF00E39770 /* LaunchScreen.storyboard in Resources */,
 				6BCB7D012017E4DF00E39770 /* Assets.xcassets in Resources */,
-				6BCB7CFC2017E4DF00E39770 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BCB7CFF2017E4DF00E39770 /* Campinger.xcdatamodeld in Sources */,
-				6BCB7CF92017E4DF00E39770 /* ViewController.m in Sources */,
+				6BD6411220228789000C0B7A /* WishListTableViewController.m in Sources */,
 				6BCB7D072017E4DF00E39770 /* main.m in Sources */,
 				6BCB7CF62017E4DF00E39770 /* AppDelegate.m in Sources */,
 			);
@@ -501,25 +493,6 @@
 			targetProxy = 6BCB7D182017E4DF00E39770 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6BCB7CFA2017E4DF00E39770 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BCB7CFB2017E4DF00E39770 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6BCB7D022017E4DF00E39770 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BCB7D032017E4DF00E39770 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6BCB7D1E2017E4DF00E39770 /* Debug */ = {
