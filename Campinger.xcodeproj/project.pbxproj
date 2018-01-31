@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EDED6CBDE64EAACF139ADEE /* libPods-Campinger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 420FBD8A19692F0D6AAC8A42 /* libPods-Campinger.a */; };
+		315D873022E5A4F5766758D4 /* libPods-CampingerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A15179749B29AE854BF7665 /* libPods-CampingerUITests.a */; };
 		6BCB7CF62017E4DF00E39770 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7CF52017E4DF00E39770 /* AppDelegate.m */; };
 		6BCB7CF92017E4DF00E39770 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7CF82017E4DF00E39770 /* ViewController.m */; };
 		6BCB7CFC2017E4DF00E39770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB7CFA2017E4DF00E39770 /* Main.storyboard */; };
@@ -16,6 +18,7 @@
 		6BCB7D072017E4DF00E39770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D062017E4DF00E39770 /* main.m */; };
 		6BCB7D112017E4DF00E39770 /* CampingerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D102017E4DF00E39770 /* CampingerTests.m */; };
 		6BCB7D1C2017E4DF00E39770 /* CampingerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D1B2017E4DF00E39770 /* CampingerUITests.m */; };
+		90B59825C2CC0A472202FFC1 /* libPods-CampingerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C5A2D24B7F348791084541 /* libPods-CampingerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18F9240F787AB3831BD7B122 /* Pods-CampingerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampingerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampingerUITests/Pods-CampingerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1A15179749B29AE854BF7665 /* libPods-CampingerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CampingerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B3A194F973A59BE7644916E /* Pods-CampingerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampingerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampingerTests/Pods-CampingerTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D70FE6D49EC6A0E4AF3ACA6 /* Pods-Campinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Campinger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Campinger/Pods-Campinger.release.xcconfig"; sourceTree = "<group>"; };
+		420FBD8A19692F0D6AAC8A42 /* libPods-Campinger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Campinger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B8C03397FFE23DCEDA46FE4 /* Pods-CampingerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampingerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampingerUITests/Pods-CampingerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6BCB7CF12017E4DF00E39770 /* Campinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Campinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCB7CF42017E4DF00E39770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6BCB7CF52017E4DF00E39770 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +62,9 @@
 		6BCB7D172017E4DF00E39770 /* CampingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCB7D1B2017E4DF00E39770 /* CampingerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampingerUITests.m; sourceTree = "<group>"; };
 		6BCB7D1D2017E4DF00E39770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7505A00871810BABE9430636 /* Pods-Campinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Campinger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Campinger/Pods-Campinger.debug.xcconfig"; sourceTree = "<group>"; };
+		C39BDB28993309012F4F2F96 /* Pods-CampingerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampingerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampingerTests/Pods-CampingerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3C5A2D24B7F348791084541 /* libPods-CampingerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CampingerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EDED6CBDE64EAACF139ADEE /* libPods-Campinger.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B59825C2CC0A472202FFC1 /* libPods-CampingerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315D873022E5A4F5766758D4 /* libPods-CampingerUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,8 @@
 				6BCB7D0F2017E4DF00E39770 /* CampingerTests */,
 				6BCB7D1A2017E4DF00E39770 /* CampingerUITests */,
 				6BCB7CF22017E4DF00E39770 /* Products */,
+				DCF3FA775412716DCF8D58F6 /* Pods */,
+				FF2FFBE239538E614E2B1DC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +152,29 @@
 			path = CampingerUITests;
 			sourceTree = "<group>";
 		};
+		DCF3FA775412716DCF8D58F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7505A00871810BABE9430636 /* Pods-Campinger.debug.xcconfig */,
+				2D70FE6D49EC6A0E4AF3ACA6 /* Pods-Campinger.release.xcconfig */,
+				C39BDB28993309012F4F2F96 /* Pods-CampingerTests.debug.xcconfig */,
+				1B3A194F973A59BE7644916E /* Pods-CampingerTests.release.xcconfig */,
+				6B8C03397FFE23DCEDA46FE4 /* Pods-CampingerUITests.debug.xcconfig */,
+				18F9240F787AB3831BD7B122 /* Pods-CampingerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF2FFBE239538E614E2B1DC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				420FBD8A19692F0D6AAC8A42 /* libPods-Campinger.a */,
+				F3C5A2D24B7F348791084541 /* libPods-CampingerTests.a */,
+				1A15179749B29AE854BF7665 /* libPods-CampingerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BCB7D202017E4DF00E39770 /* Build configuration list for PBXNativeTarget "Campinger" */;
 			buildPhases = (
+				B7047FE6F0E0711CB778DB0B /* [CP] Check Pods Manifest.lock */,
 				6BCB7CED2017E4DF00E39770 /* Sources */,
 				6BCB7CEE2017E4DF00E39770 /* Frameworks */,
 				6BCB7CEF2017E4DF00E39770 /* Resources */,
+				343BCD0DEB9A2B6867FA000D /* [CP] Embed Pods Frameworks */,
+				CA0B93E655F28CF69D436128 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BCB7D232017E4DF00E39770 /* Build configuration list for PBXNativeTarget "CampingerTests" */;
 			buildPhases = (
+				C5E389B971F0202814CFC1CD /* [CP] Check Pods Manifest.lock */,
 				6BCB7D082017E4DF00E39770 /* Sources */,
 				6BCB7D092017E4DF00E39770 /* Frameworks */,
 				6BCB7D0A2017E4DF00E39770 /* Resources */,
+				4E0CCB2652253115EB16EBBE /* [CP] Embed Pods Frameworks */,
+				A08D28B20EFAC6E39B48B75E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BCB7D262017E4DF00E39770 /* Build configuration list for PBXNativeTarget "CampingerUITests" */;
 			buildPhases = (
+				81575A145711256D89AFB164 /* [CP] Check Pods Manifest.lock */,
 				6BCB7D132017E4DF00E39770 /* Sources */,
 				6BCB7D142017E4DF00E39770 /* Frameworks */,
 				6BCB7D152017E4DF00E39770 /* Resources */,
+				4E45F3EF779CBBEE93B758E4 /* [CP] Embed Pods Frameworks */,
+				5C9D65409783FE6A84A27D73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +311,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		343BCD0DEB9A2B6867FA000D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Campinger/Pods-Campinger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E0CCB2652253115EB16EBBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampingerTests/Pods-CampingerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E45F3EF779CBBEE93B758E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampingerUITests/Pods-CampingerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C9D65409783FE6A84A27D73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampingerUITests/Pods-CampingerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81575A145711256D89AFB164 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CampingerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A08D28B20EFAC6E39B48B75E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampingerTests/Pods-CampingerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7047FE6F0E0711CB778DB0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Campinger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5E389B971F0202814CFC1CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CampingerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA0B93E655F28CF69D436128 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Campinger/Pods-Campinger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6BCB7CED2017E4DF00E39770 /* Sources */ = {
@@ -432,6 +628,7 @@
 		};
 		6BCB7D212017E4DF00E39770 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7505A00871810BABE9430636 /* Pods-Campinger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +643,7 @@
 		};
 		6BCB7D222017E4DF00E39770 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D70FE6D49EC6A0E4AF3ACA6 /* Pods-Campinger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +658,7 @@
 		};
 		6BCB7D242017E4DF00E39770 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C39BDB28993309012F4F2F96 /* Pods-CampingerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -475,6 +674,7 @@
 		};
 		6BCB7D252017E4DF00E39770 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B3A194F973A59BE7644916E /* Pods-CampingerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +690,7 @@
 		};
 		6BCB7D272017E4DF00E39770 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B8C03397FFE23DCEDA46FE4 /* Pods-CampingerUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V99Y2FQ5P5;
@@ -504,6 +705,7 @@
 		};
 		6BCB7D282017E4DF00E39770 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18F9240F787AB3831BD7B122 /* Pods-CampingerUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V99Y2FQ5P5;
