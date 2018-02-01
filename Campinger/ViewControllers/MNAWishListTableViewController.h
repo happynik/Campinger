@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MNAWishesService.h"
 
-@interface WishListTableViewController : UITableViewController
+@interface MNAWishListTableViewController : UITableViewController
+
+- (instancetype) initWithWishesService: (id<MNAWishesServiceProtocol>) wishesService;
 
 @end

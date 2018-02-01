@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "WishListTableViewController.h"
+#import "MNAAssembly.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [UIWindow new];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [WishListTableViewController new];
+    
+    MNAAssembly *assembly = [[MNAAssembly new] configure];
+    self.window.rootViewController = assembly.rootViewController;
     [self.window makeKeyAndVisible];
     
     return YES;

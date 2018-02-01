@@ -15,7 +15,9 @@
 		6BCB7D072017E4DF00E39770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D062017E4DF00E39770 /* main.m */; };
 		6BCB7D112017E4DF00E39770 /* CampingerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D102017E4DF00E39770 /* CampingerTests.m */; };
 		6BCB7D1C2017E4DF00E39770 /* CampingerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB7D1B2017E4DF00E39770 /* CampingerUITests.m */; };
-		6BD6411220228789000C0B7A /* WishListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6411120228789000C0B7A /* WishListTableViewController.m */; };
+		6BD6411220228789000C0B7A /* MNAWishListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6411120228789000C0B7A /* MNAWishListTableViewController.m */; };
+		6BD6411720229354000C0B7A /* MNAWishesService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6411620229354000C0B7A /* MNAWishesService.m */; };
+		6BD6411A20229849000C0B7A /* MNAAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6411920229849000C0B7A /* MNAAssembly.m */; };
 		90B59825C2CC0A472202FFC1 /* libPods-CampingerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C5A2D24B7F348791084541 /* libPods-CampingerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +58,12 @@
 		6BCB7D172017E4DF00E39770 /* CampingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCB7D1B2017E4DF00E39770 /* CampingerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampingerUITests.m; sourceTree = "<group>"; };
 		6BCB7D1D2017E4DF00E39770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BD6411020228789000C0B7A /* WishListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WishListTableViewController.h; sourceTree = "<group>"; };
-		6BD6411120228789000C0B7A /* WishListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WishListTableViewController.m; sourceTree = "<group>"; };
+		6BD6411020228789000C0B7A /* MNAWishListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAWishListTableViewController.h; sourceTree = "<group>"; };
+		6BD6411120228789000C0B7A /* MNAWishListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAWishListTableViewController.m; sourceTree = "<group>"; };
+		6BD6411520229354000C0B7A /* MNAWishesService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAWishesService.h; sourceTree = "<group>"; };
+		6BD6411620229354000C0B7A /* MNAWishesService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAWishesService.m; sourceTree = "<group>"; };
+		6BD6411820229849000C0B7A /* MNAAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAAssembly.h; sourceTree = "<group>"; };
+		6BD6411920229849000C0B7A /* MNAAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAAssembly.m; sourceTree = "<group>"; };
 		7505A00871810BABE9430636 /* Pods-Campinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Campinger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Campinger/Pods-Campinger.debug.xcconfig"; sourceTree = "<group>"; };
 		C39BDB28993309012F4F2F96 /* Pods-CampingerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampingerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampingerTests/Pods-CampingerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3C5A2D24B7F348791084541 /* libPods-CampingerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CampingerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,14 +122,16 @@
 		6BCB7CF32017E4DF00E39770 /* Campinger */ = {
 			isa = PBXGroup;
 			children = (
+				6BD64114202292E8000C0B7A /* Services */,
+				6BD6411320228D6C000C0B7A /* ViewControllers */,
 				6BCB7CF42017E4DF00E39770 /* AppDelegate.h */,
 				6BCB7CF52017E4DF00E39770 /* AppDelegate.m */,
 				6BCB7D002017E4DF00E39770 /* Assets.xcassets */,
 				6BCB7D052017E4DF00E39770 /* Info.plist */,
 				6BCB7D062017E4DF00E39770 /* main.m */,
 				6BCB7CFD2017E4DF00E39770 /* Campinger.xcdatamodeld */,
-				6BD6411020228789000C0B7A /* WishListTableViewController.h */,
-				6BD6411120228789000C0B7A /* WishListTableViewController.m */,
+				6BD6411820229849000C0B7A /* MNAAssembly.h */,
+				6BD6411920229849000C0B7A /* MNAAssembly.m */,
 			);
 			path = Campinger;
 			sourceTree = "<group>";
@@ -144,6 +152,24 @@
 				6BCB7D1D2017E4DF00E39770 /* Info.plist */,
 			);
 			path = CampingerUITests;
+			sourceTree = "<group>";
+		};
+		6BD6411320228D6C000C0B7A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BD6411020228789000C0B7A /* MNAWishListTableViewController.h */,
+				6BD6411120228789000C0B7A /* MNAWishListTableViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6BD64114202292E8000C0B7A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6BD6411520229354000C0B7A /* MNAWishesService.h */,
+				6BD6411620229354000C0B7A /* MNAWishesService.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		DCF3FA775412716DCF8D58F6 /* Pods */ = {
@@ -457,8 +483,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BCB7CFF2017E4DF00E39770 /* Campinger.xcdatamodeld in Sources */,
-				6BD6411220228789000C0B7A /* WishListTableViewController.m in Sources */,
+				6BD6411220228789000C0B7A /* MNAWishListTableViewController.m in Sources */,
+				6BD6411720229354000C0B7A /* MNAWishesService.m in Sources */,
 				6BCB7D072017E4DF00E39770 /* main.m in Sources */,
+				6BD6411A20229849000C0B7A /* MNAAssembly.m in Sources */,
 				6BCB7CF62017E4DF00E39770 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,26 +6,50 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
-#import "WishListTableViewController.h"
+#import "MNAWishListTableViewController.h"
 
-@interface WishListTableViewController ()
+@interface MNAWishListTableViewController ()
 
-@property (nonatomic, strong) UIButton *nextButton;
+@property (nonatomic, strong) id<MNAWishesServiceProtocol> wishesService;
+
+@property (nonatomic, strong) UIBarButtonItem *nextBarButton;
 
 @end
 
-@implementation WishListTableViewController
+@implementation MNAWishListTableViewController
+
+- (instancetype) initWithWishesService: (id<MNAWishesServiceProtocol>) wishesService
+{
+    if (self = [super init])
+    {
+        _wishesService = wishesService;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
+    // вынес в отдельную функцию если
+    // нужно будет здесь делать что-то кроме
+    [self p_prepareUI];
+}
+
+- (void) p_prepareUI
+{
     self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"даты" style:UIBarButtonItemStylePlain target:self action:@selector(p_goToChoisingPeriod)];
     
-    self.navigationItem.title = @"navbar";
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = @"Список желаний";
+    self.navigationItem.rightBarButtonItem = self.nextBarButton;
+}
+
+- (void) p_goToChoisingPeriod
+{
+    // переходим на экран выбора периода поездки
 }
 
 - (void)didReceiveMemoryWarning {
