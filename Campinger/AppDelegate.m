@@ -21,7 +21,7 @@
     self.window = [UIWindow new];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    MNAAssembly *assembly = [[MNAAssembly new] configure];
+    MNAAssembly *assembly = [[MNAAssembly new] configureIsNavigationBar:YES];
     self.window.rootViewController = assembly.rootViewController;
     [self.window makeKeyAndVisible];
     

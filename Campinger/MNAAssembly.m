@@ -8,7 +8,8 @@
 
 #import "MNAAssembly.h"
 #import "MNAWishesService.h"
-#import "MNAWishListTableViewController.h"
+//#import "MNAWishListTableViewController.h"
+#import "MNAWishListViewController.h"
 
 @interface MNAAssembly ()
 
@@ -27,10 +28,12 @@
     return self;
 }
 
-- (instancetype) configure
+- (instancetype) configureIsNavigationBar: (BOOL)isNavigationBar
 {
-    MNAWishListTableViewController *startViewController = [[MNAWishListTableViewController alloc] initWithWishesService:self.wishesService];
-    self.rootViewController = [[UINavigationController alloc] initWithRootViewController:startViewController];
+    MNAWishListViewController *startViewController = [[MNAWishListViewController alloc] initWithWishesService:self.wishesService];
+    self.rootViewController = isNavigationBar
+        ? [[UINavigationController alloc] initWithRootViewController:startViewController]
+        : startViewController;
     
     return self;
 }

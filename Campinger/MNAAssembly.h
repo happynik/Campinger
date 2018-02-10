@@ -16,6 +16,6 @@
 /*
  конфигурируем приложение
  */
-- (instancetype) configure;
+- (instancetype) configureIsNavigationBar: (BOOL)isNavigationBar;
 
 @end

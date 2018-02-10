@@ -8,13 +8,19 @@
 
 #import "MNAWishesService.h"
 
+@interface MNAWishesService ()
+
+@end
+
 @implementation MNAWishesService
+
+@synthesize AllWishes = _allWishes;
 
 - (instancetype) init
 {
     if (self = [super init])
     {
-        // засетим в проперти
+        _allWishes = @[@"surf", @"bitch", @"snowboard", @"bitch"];
     }
     return self;
 }
