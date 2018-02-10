@@ -15,14 +15,8 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Advanture"];
 }
 
-@dynamic dateFromMe;
-@dynamic dateFromPartner;
-@dynamic dateToMe;
-@dynamic dateToPartner;
-@dynamic partnerName;
 @dynamic title;
-@dynamic wishes;
-@dynamic places;
 @dynamic items;
+@dynamic members;
 
 @end

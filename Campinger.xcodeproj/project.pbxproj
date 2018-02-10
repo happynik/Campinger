@@ -18,6 +18,8 @@
 		6B938483202F474300975A6D /* MNAWish+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938479202F474300975A6D /* MNAWish+CoreDataProperties.m */; };
 		6B938484202F474300975A6D /* MNAAdventureItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93847C202F474300975A6D /* MNAAdventureItem+CoreDataClass.m */; };
 		6B938485202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93847D202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m */; };
+		6B93848A202F4D1000975A6D /* MNAMember+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938488202F4D1000975A6D /* MNAMember+CoreDataClass.m */; };
+		6B93848B202F4D1000975A6D /* MNAMember+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938489202F4D1000975A6D /* MNAMember+CoreDataProperties.m */; };
 		6BC46ECD202799CC00F5C897 /* MNAWishListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC46ECC202799CC00F5C897 /* MNAWishListViewController.m */; };
 		6BC46ED12029577000F5C897 /* MNAWishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC46ED02029577000F5C897 /* MNAWishCollectionViewCell.m */; };
 		6BC46ED520296EA800F5C897 /* UIImage+MNAImageExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC46ED420296EA800F5C897 /* UIImage+MNAImageExtensions.m */; };
@@ -74,6 +76,10 @@
 		6B93847B202F474300975A6D /* MNAAdventureItem+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAAdventureItem+CoreDataClass.h"; sourceTree = "<group>"; };
 		6B93847C202F474300975A6D /* MNAAdventureItem+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAAdventureItem+CoreDataClass.m"; sourceTree = "<group>"; };
 		6B93847D202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAAdventureItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6B938486202F4D1000975A6D /* MNAMember+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAMember+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6B938487202F4D1000975A6D /* MNAMember+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAMember+CoreDataClass.h"; sourceTree = "<group>"; };
+		6B938488202F4D1000975A6D /* MNAMember+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAMember+CoreDataClass.m"; sourceTree = "<group>"; };
+		6B938489202F4D1000975A6D /* MNAMember+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAMember+CoreDataProperties.m"; sourceTree = "<group>"; };
 		6BC46ECB202799CC00F5C897 /* MNAWishListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAWishListViewController.h; sourceTree = "<group>"; };
 		6BC46ECC202799CC00F5C897 /* MNAWishListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAWishListViewController.m; sourceTree = "<group>"; };
 		6BC46ECF2029577000F5C897 /* MNAWishCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAWishCollectionViewCell.h; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 		6B93846D202F471300975A6D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				6B938486202F4D1000975A6D /* MNAMember+CoreDataProperties.h */,
+				6B938487202F4D1000975A6D /* MNAMember+CoreDataClass.h */,
+				6B938488202F4D1000975A6D /* MNAMember+CoreDataClass.m */,
+				6B938489202F4D1000975A6D /* MNAMember+CoreDataProperties.m */,
 				6B93846E202F474300975A6D /* MNAPlace+CoreDataProperties.h */,
 				6B93846F202F474300975A6D /* MNAPlace+CoreDataClass.h */,
 				6B938470202F474300975A6D /* MNAPlace+CoreDataClass.m */,
@@ -574,9 +584,11 @@
 				6BCB7D072017E4DF00E39770 /* main.m in Sources */,
 				6B39E262202EDF90008EEE49 /* MNAChoosePeriodViewController.m in Sources */,
 				6B93847F202F474300975A6D /* MNAPlace+CoreDataProperties.m in Sources */,
+				6B93848A202F4D1000975A6D /* MNAMember+CoreDataClass.m in Sources */,
 				6B938485202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m in Sources */,
 				6B938483202F474300975A6D /* MNAWish+CoreDataProperties.m in Sources */,
 				6BD6411A20229849000C0B7A /* MNAAssembly.m in Sources */,
+				6B93848B202F4D1000975A6D /* MNAMember+CoreDataProperties.m in Sources */,
 				6BCB7CF62017E4DF00E39770 /* AppDelegate.m in Sources */,
 				6B938482202F474300975A6D /* MNAWish+CoreDataClass.m in Sources */,
 			);
