@@ -10,6 +10,14 @@
 		1EDED6CBDE64EAACF139ADEE /* libPods-Campinger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 420FBD8A19692F0D6AAC8A42 /* libPods-Campinger.a */; };
 		315D873022E5A4F5766758D4 /* libPods-CampingerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A15179749B29AE854BF7665 /* libPods-CampingerUITests.a */; };
 		6B39E262202EDF90008EEE49 /* MNAChoosePeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B39E261202EDF90008EEE49 /* MNAChoosePeriodViewController.m */; };
+		6B93847E202F474300975A6D /* MNAPlace+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938470202F474300975A6D /* MNAPlace+CoreDataClass.m */; };
+		6B93847F202F474300975A6D /* MNAPlace+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938471202F474300975A6D /* MNAPlace+CoreDataProperties.m */; };
+		6B938480202F474300975A6D /* MNAAdvanture+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938474202F474300975A6D /* MNAAdvanture+CoreDataClass.m */; };
+		6B938481202F474300975A6D /* MNAAdvanture+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938475202F474300975A6D /* MNAAdvanture+CoreDataProperties.m */; };
+		6B938482202F474300975A6D /* MNAWish+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938478202F474300975A6D /* MNAWish+CoreDataClass.m */; };
+		6B938483202F474300975A6D /* MNAWish+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B938479202F474300975A6D /* MNAWish+CoreDataProperties.m */; };
+		6B938484202F474300975A6D /* MNAAdventureItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93847C202F474300975A6D /* MNAAdventureItem+CoreDataClass.m */; };
+		6B938485202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B93847D202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m */; };
 		6BC46ECD202799CC00F5C897 /* MNAWishListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC46ECC202799CC00F5C897 /* MNAWishListViewController.m */; };
 		6BC46ED12029577000F5C897 /* MNAWishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC46ED02029577000F5C897 /* MNAWishCollectionViewCell.m */; };
 		6BC46ED520296EA800F5C897 /* UIImage+MNAImageExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC46ED420296EA800F5C897 /* UIImage+MNAImageExtensions.m */; };
@@ -50,6 +58,22 @@
 		6B39E260202EDF90008EEE49 /* MNAChoosePeriodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAChoosePeriodViewController.h; sourceTree = "<group>"; };
 		6B39E261202EDF90008EEE49 /* MNAChoosePeriodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAChoosePeriodViewController.m; sourceTree = "<group>"; };
 		6B8C03397FFE23DCEDA46FE4 /* Pods-CampingerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampingerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampingerUITests/Pods-CampingerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B93846E202F474300975A6D /* MNAPlace+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAPlace+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6B93846F202F474300975A6D /* MNAPlace+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAPlace+CoreDataClass.h"; sourceTree = "<group>"; };
+		6B938470202F474300975A6D /* MNAPlace+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAPlace+CoreDataClass.m"; sourceTree = "<group>"; };
+		6B938471202F474300975A6D /* MNAPlace+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAPlace+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6B938472202F474300975A6D /* MNAAdvanture+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAAdvanture+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6B938473202F474300975A6D /* MNAAdvanture+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAAdvanture+CoreDataClass.h"; sourceTree = "<group>"; };
+		6B938474202F474300975A6D /* MNAAdvanture+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAAdvanture+CoreDataClass.m"; sourceTree = "<group>"; };
+		6B938475202F474300975A6D /* MNAAdvanture+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAAdvanture+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6B938476202F474300975A6D /* MNAWish+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAWish+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6B938477202F474300975A6D /* MNAWish+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAWish+CoreDataClass.h"; sourceTree = "<group>"; };
+		6B938478202F474300975A6D /* MNAWish+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAWish+CoreDataClass.m"; sourceTree = "<group>"; };
+		6B938479202F474300975A6D /* MNAWish+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAWish+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6B93847A202F474300975A6D /* MNAAdventureItem+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAAdventureItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6B93847B202F474300975A6D /* MNAAdventureItem+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAAdventureItem+CoreDataClass.h"; sourceTree = "<group>"; };
+		6B93847C202F474300975A6D /* MNAAdventureItem+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAAdventureItem+CoreDataClass.m"; sourceTree = "<group>"; };
+		6B93847D202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MNAAdventureItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		6BC46ECB202799CC00F5C897 /* MNAWishListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAWishListViewController.h; sourceTree = "<group>"; };
 		6BC46ECC202799CC00F5C897 /* MNAWishListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAWishListViewController.m; sourceTree = "<group>"; };
 		6BC46ECF2029577000F5C897 /* MNAWishCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAWishCollectionViewCell.h; sourceTree = "<group>"; };
@@ -106,6 +130,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B93846D202F471300975A6D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6B93846E202F474300975A6D /* MNAPlace+CoreDataProperties.h */,
+				6B93846F202F474300975A6D /* MNAPlace+CoreDataClass.h */,
+				6B938470202F474300975A6D /* MNAPlace+CoreDataClass.m */,
+				6B938471202F474300975A6D /* MNAPlace+CoreDataProperties.m */,
+				6B938472202F474300975A6D /* MNAAdvanture+CoreDataProperties.h */,
+				6B938473202F474300975A6D /* MNAAdvanture+CoreDataClass.h */,
+				6B938474202F474300975A6D /* MNAAdvanture+CoreDataClass.m */,
+				6B938475202F474300975A6D /* MNAAdvanture+CoreDataProperties.m */,
+				6B938476202F474300975A6D /* MNAWish+CoreDataProperties.h */,
+				6B938477202F474300975A6D /* MNAWish+CoreDataClass.h */,
+				6B938478202F474300975A6D /* MNAWish+CoreDataClass.m */,
+				6B938479202F474300975A6D /* MNAWish+CoreDataProperties.m */,
+				6B93847A202F474300975A6D /* MNAAdventureItem+CoreDataProperties.h */,
+				6B93847B202F474300975A6D /* MNAAdventureItem+CoreDataClass.h */,
+				6B93847C202F474300975A6D /* MNAAdventureItem+CoreDataClass.m */,
+				6B93847D202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m */,
+			);
+			name = CoreData;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		6BC46ECE202955E400F5C897 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +197,7 @@
 		6BCB7CF32017E4DF00E39770 /* Campinger */ = {
 			isa = PBXGroup;
 			children = (
+				6B93846D202F471300975A6D /* CoreData */,
 				6BC46ED220296D6D00F5C897 /* Categories */,
 				6BC46ECE202955E400F5C897 /* Views */,
 				6BD64114202292E8000C0B7A /* Services */,
@@ -513,15 +562,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B938484202F474300975A6D /* MNAAdventureItem+CoreDataClass.m in Sources */,
+				6B938481202F474300975A6D /* MNAAdvanture+CoreDataProperties.m in Sources */,
 				6BCB7CFF2017E4DF00E39770 /* Campinger.xcdatamodeld in Sources */,
+				6B938480202F474300975A6D /* MNAAdvanture+CoreDataClass.m in Sources */,
 				6BD6411720229354000C0B7A /* MNAWishesService.m in Sources */,
+				6B93847E202F474300975A6D /* MNAPlace+CoreDataClass.m in Sources */,
 				6BC46ED520296EA800F5C897 /* UIImage+MNAImageExtensions.m in Sources */,
 				6BC46ECD202799CC00F5C897 /* MNAWishListViewController.m in Sources */,
 				6BC46ED12029577000F5C897 /* MNAWishCollectionViewCell.m in Sources */,
 				6BCB7D072017E4DF00E39770 /* main.m in Sources */,
 				6B39E262202EDF90008EEE49 /* MNAChoosePeriodViewController.m in Sources */,
+				6B93847F202F474300975A6D /* MNAPlace+CoreDataProperties.m in Sources */,
+				6B938485202F474300975A6D /* MNAAdventureItem+CoreDataProperties.m in Sources */,
+				6B938483202F474300975A6D /* MNAWish+CoreDataProperties.m in Sources */,
 				6BD6411A20229849000C0B7A /* MNAAssembly.m in Sources */,
 				6BCB7CF62017E4DF00E39770 /* AppDelegate.m in Sources */,
+				6B938482202F474300975A6D /* MNAWish+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
