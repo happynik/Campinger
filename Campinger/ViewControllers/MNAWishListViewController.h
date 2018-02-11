@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MNAWishesService.h"
+#import "MNAAdventureService.h"
 
 @interface MNAWishListViewController : UICollectionViewController
 
-- (instancetype) initWithWishesService: (id<MNAWishesServiceProtocol>) wishesService;
+- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService;
 
 @end

@@ -9,15 +9,17 @@
 #import "MNAWishListViewController.h"
 #import "MNAWishCollectionViewCell.h"
 #import "MNAChoosePeriodViewController.h"
+//#import "MNAWish+CoreDataProperties.h"
 
 static int const columnsInCollectionView = 2;
 
 @interface MNAWishListViewController ()
 
-@property (nonatomic, strong) id<MNAWishesServiceProtocol> wishesService;
+@property (nonatomic, strong) id<MNAAdventureServiceProtocol> adventureService;
+
+//@property (nonatomic, strong) MNAMember *currentMember;
 
 @property (nonatomic) NSInteger selectedItemsCount;
-
 @property (nonatomic, strong) UIBarButtonItem *nextBarButton;
 
 @end
@@ -26,11 +28,25 @@ static int const columnsInCollectionView = 2;
 
 static NSString * const reuseIdentifier = @"Cell";
 
-- (instancetype) initWithWishesService: (id<MNAWishesServiceProtocol>) wishesService
+//- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
+//                                ForMember: (MNAMember *)member
+//{
+//    if (self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]])
+//    {
+//        _adventureService = adventureService;
+//        //_currentMember = member;
+//
+//        _nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"далее" style:UIBarButtonItemStylePlain target:self action:@selector(p_nextButtonClick)];
+//
+//    }
+//    return self;
+//}
+
+- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
 {
     if (self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]])
     {
-        _wishesService = wishesService;
+        _adventureService = adventureService;
         _nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"далее" style:UIBarButtonItemStylePlain target:self action:@selector(p_nextButtonClick)];
         
     }
@@ -103,7 +119,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
 #warning Incomplete implementation, return the number of items
-    return self.wishesService.AllWishes.count;
+    return [self.adventureService availableWishesForMember:nil].count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -111,7 +127,8 @@ static NSString * const reuseIdentifier = @"Cell";
     MNAWishCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    cell.name = self.wishesService.AllWishes[indexPath.row];
+//    MNAWish *wish = [self.adventureService availableWishesForMember:nil][indexPath.row];
+//    cell.name = wish.name;
     
     return cell;
 }

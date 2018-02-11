@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "MNACoreDataService.h"
 
 @interface MNAAssembly : NSObject
 
 @property (nonatomic, strong) UIViewController *rootViewController;
+
+@property (nonatomic, strong) MNACoreDataService *coreDataService;
 
 /*
  конфигурируем приложение

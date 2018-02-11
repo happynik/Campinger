@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Campinger/ViewControllers/MNAWishListViewController.m"
-            timestampString = "539966045.061494"
+            timestampString = "540061872.085409"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-p_setEstimatedSizeIfNeeded"
             landmarkType = "7">
          </BreakpointContent>
