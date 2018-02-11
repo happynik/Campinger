@@ -109,14 +109,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B93846D202F471300975A6D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		6BC46ECE202955E400F5C897 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +152,6 @@
 		6BCB7CF32017E4DF00E39770 /* Campinger */ = {
 			isa = PBXGroup;
 			children = (
-				6B93846D202F471300975A6D /* Models */,
 				6BC46ED220296D6D00F5C897 /* Categories */,
 				6BC46ECE202955E400F5C897 /* Views */,
 				6BD64114202292E8000C0B7A /* Services */,
