@@ -22,15 +22,16 @@
 {
     if (self = [super init])
     {
-        _adventureService = [MNAAdventureService new];
         _coreDataService = [MNACoreDataService new];
+        _adventureService = [[MNAAdventureService alloc] initWithCoreDataService:_coreDataService];
     }
     return self;
 }
 
 - (instancetype) configureIsNavigationBar: (BOOL)isNavigationBar
 {
-    MNAWishListViewController *startViewController = [[MNAWishListViewController alloc] initWithAdventureService:self.adventureService];
+    MNAWishListViewController *startViewController = [[MNAWishListViewController alloc] initWithAdventureService:self.adventureService
+                                                      ForMember:self.adventureService.me];
     self.rootViewController = isNavigationBar
         ? [[UINavigationController alloc] initWithRootViewController:startViewController]
         : startViewController;

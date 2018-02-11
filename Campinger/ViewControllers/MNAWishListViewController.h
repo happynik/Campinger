@@ -11,6 +11,9 @@
 
 @interface MNAWishListViewController : UICollectionViewController
 
+- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
+                                ForMember: (MNAMember *)member NS_DESIGNATED_INITIALIZER;
+
 - (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService;
 
 @end

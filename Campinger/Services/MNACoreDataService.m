@@ -8,6 +8,16 @@
 
 #import "MNACoreDataService.h"
 
+#import "MNAAdventure+CoreDataClass.h"
+#import "MNAMember+CoreDataClass.h"
+#import "MNAWish+CoreDataClass.h"
+
+@interface MNACoreDataService ()
+
+@property (readonly, strong) NSPersistentContainer *persistentContainer;
+
+@end
+
 @implementation MNACoreDataService
 
 #pragma mark - Core Data stack
@@ -53,6 +63,40 @@
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }
+}
+
+#pragma mark - Create
+
+- (MNAAdventure *) createAdventure
+{
+    return [self p_createManageObjectFromClass:@"Adventure"];
+}
+
+- (NSArray<MNAAdventure *> *) adventures
+{
+    NSFetchRequest *fetchRequest = [MNAAdventure fetchRequest];
+    //fetchRequest.predicate = [NSPredicate predicateWithFormat:@""];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
+    
+    NSError *error = nil;
+    return [self.persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+}
+
+- (MNAMember *) createMember
+{
+    return [self p_createManageObjectFromClass:@"Member"];
+}
+
+- (MNAWish *) createWish
+{
+    return [self p_createManageObjectFromClass:@"Wish"];
+}
+
+- (id) p_createManageObjectFromClass: (NSString *) entityName
+{
+    return [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.persistentContainer.viewContext];
 }
 
 @end

@@ -7,23 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import "MNAMember+CoreDataClass.h"
+#import "MNACoreDataService.h"
+
+#import "MNAMember+CoreDataClass.h"
+#import "MNAWish+CoreDataClass.h"
 
 @protocol MNAAdventureServiceProtocol
+
+@property (nonatomic, strong) MNAMember *me;
 
 /*
  Возвращает список выбранных желаний для участника
  */
-//- (NSArray *) selectedWishesForMember: (MNAMember *)member;
-- (NSArray *) selectedWishesForMember: (id)member;
+- (NSArray<MNAWish *> *) selectedWishesForMember: (MNAMember *)member;
 
 /*
  Возвращает список доступных желаний для участника
  */
-- (NSArray *) availableWishesForMember: (id)member;
+- (NSArray<MNAWish *> *) availableWishesForMember: (id)member;
 
 @end
 
 @interface MNAAdventureService : NSObject <MNAAdventureServiceProtocol>
+
+- (instancetype) initWithCoreDataService: (MNACoreDataService *)coreDataService;
 
 @end

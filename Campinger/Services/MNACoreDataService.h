@@ -9,9 +9,30 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class MNAAdventure;
+@class MNAMember;
+@class MNAWish;
+
 @interface MNACoreDataService : NSObject
 
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
+/*
+ Создает новое приключение в CoreData
+ */
+- (MNAAdventure *) createAdventure;
+/*
+ Возвращает все приключения из CoreData
+ */
+- (NSArray<MNAAdventure *> *) adventures;
+
+/*
+ Создает нового участника приключения в CoreData
+ */
+- (MNAMember *) createMember;
+
+/*
+ Создает новое желание в CoreData
+ */
+- (MNAWish *) createWish;
 
 - (void)saveContext;
 

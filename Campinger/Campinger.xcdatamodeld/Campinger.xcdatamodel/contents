@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="Advanture" representedClassName="MNAAdvanture" syncable="YES">
+    <entity name="Adventure" representedClassName="MNAAdventure" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AdventureItem" syncable="YES"/>
+        <relationship name="adventureItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AdventureItem" syncable="YES"/>
         <relationship name="members" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Member" syncable="YES"/>
     </entity>
-    <entity name="AdventureItem" representedClassName="MNAAdventureItem" syncable="YES" codeGenerationType="class">
+    <entity name="AdventureItem" representedClassName="MNAAdventureItem" syncable="YES">
         <attribute name="begin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -30,10 +30,10 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Advanture" positionX="-243" positionY="-144" width="110" height="88"/>
-        <element name="Wish" positionX="-333" positionY="323" width="128" height="73"/>
-        <element name="Place" positionX="-632" positionY="311" width="128" height="103"/>
-        <element name="AdventureItem" positionX="-11" positionY="45" width="128" height="120"/>
+        <element name="Adventure" positionX="-243" positionY="-144" width="110" height="90"/>
+        <element name="AdventureItem" positionX="-11" positionY="45" width="128" height="118"/>
         <element name="Member" positionX="-477" positionY="117" width="128" height="118"/>
+        <element name="Place" positionX="-632" positionY="311" width="128" height="103"/>
+        <element name="Wish" positionX="-333" positionY="323" width="128" height="73"/>
     </elements>
 </model>

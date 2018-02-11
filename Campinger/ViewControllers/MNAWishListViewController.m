@@ -9,7 +9,6 @@
 #import "MNAWishListViewController.h"
 #import "MNAWishCollectionViewCell.h"
 #import "MNAChoosePeriodViewController.h"
-//#import "MNAWish+CoreDataProperties.h"
 
 static int const columnsInCollectionView = 2;
 
@@ -17,7 +16,8 @@ static int const columnsInCollectionView = 2;
 
 @property (nonatomic, strong) id<MNAAdventureServiceProtocol> adventureService;
 
-//@property (nonatomic, strong) MNAMember *currentMember;
+@property (nonatomic, strong) MNAMember *currentMember;
+@property (nonatomic, strong) NSArray<MNAWish *> *wishes;
 
 @property (nonatomic) NSInteger selectedItemsCount;
 @property (nonatomic, strong) UIBarButtonItem *nextBarButton;
@@ -28,28 +28,28 @@ static int const columnsInCollectionView = 2;
 
 static NSString * const reuseIdentifier = @"Cell";
 
-//- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
-//                                ForMember: (MNAMember *)member
-//{
-//    if (self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]])
-//    {
-//        _adventureService = adventureService;
-//        //_currentMember = member;
-//
-//        _nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"далее" style:UIBarButtonItemStylePlain target:self action:@selector(p_nextButtonClick)];
-//
-//    }
-//    return self;
-//}
-
 - (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
+                                ForMember: (MNAMember *)member
 {
     if (self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]])
     {
         _adventureService = adventureService;
-        _nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"далее" style:UIBarButtonItemStylePlain target:self action:@selector(p_nextButtonClick)];
-        
+        _currentMember = member;
+        _wishes = [_adventureService availableWishesForMember:_currentMember];
+
+        _nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"далее"
+                                                          style:UIBarButtonItemStylePlain
+                                                         target:self
+                                                         action:@selector(p_nextButtonClick)];
     }
+    return self;
+}
+
+- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
+{
+    MNAMember *member = [MNAMember new];
+    member.name = @"me";
+    self = [self initWithAdventureService:adventureService ForMember:member];
     return self;
 }
 
@@ -67,18 +67,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[MNAWishCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    //[self p_setEstimatedSizeIfNeeded];
     self.navigationItem.rightBarButtonItem = self.nextBarButton;
-}
-
-- (void)p_setEstimatedSizeIfNeeded
-{
-    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-    CGFloat estimatedWidth = 60.f;
-    if (flowLayout.estimatedItemSize.width != estimatedWidth) {
-        [flowLayout setEstimatedItemSize:CGSizeMake(estimatedWidth, 200)];
-        [flowLayout invalidateLayout];
-    }
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -119,7 +108,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
 #warning Incomplete implementation, return the number of items
-    return [self.adventureService availableWishesForMember:nil].count;
+    return self.wishes.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -127,8 +116,8 @@ static NSString * const reuseIdentifier = @"Cell";
     MNAWishCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-//    MNAWish *wish = [self.adventureService availableWishesForMember:nil][indexPath.row];
-//    cell.name = wish.name;
+    MNAWish *wish = self.wishes[indexPath.row];
+    cell.name = wish.name;
     
     return cell;
 }

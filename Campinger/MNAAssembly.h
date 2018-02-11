@@ -12,9 +12,9 @@
 
 @interface MNAAssembly : NSObject
 
-@property (nonatomic, strong) UIViewController *rootViewController;
-
 @property (nonatomic, strong) MNACoreDataService *coreDataService;
+
+@property (nonatomic, strong) UIViewController *rootViewController;
 
 /*
  конфигурируем приложение
