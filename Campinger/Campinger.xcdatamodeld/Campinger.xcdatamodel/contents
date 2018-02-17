@@ -16,8 +16,8 @@
         <attribute name="dateFrom" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateTo" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="places" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" syncable="YES"/>
-        <relationship name="wishes" optional="YES" toMany="YES" minCount="2" deletionRule="Nullify" destinationEntity="Wish" syncable="YES"/>
+        <relationship name="places" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Place" syncable="YES"/>
+        <relationship name="wishes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Wish" syncable="YES"/>
     </entity>
     <entity name="Place" representedClassName="MNAPlace" syncable="YES">
         <attribute name="dislikeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -28,12 +28,13 @@
     <entity name="Wish" representedClassName="MNAWish" syncable="YES">
         <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Member" syncable="YES"/>
     </entity>
     <elements>
         <element name="Adventure" positionX="-243" positionY="-144" width="110" height="90"/>
         <element name="AdventureItem" positionX="-11" positionY="45" width="128" height="118"/>
         <element name="Member" positionX="-477" positionY="117" width="128" height="118"/>
-        <element name="Place" positionX="-632" positionY="311" width="128" height="103"/>
-        <element name="Wish" positionX="-333" positionY="323" width="128" height="73"/>
+        <element name="Place" positionX="-612" positionY="324" width="128" height="103"/>
+        <element name="Wish" positionX="-333" positionY="324" width="128" height="90"/>
     </elements>
 </model>

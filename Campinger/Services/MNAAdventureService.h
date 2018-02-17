@@ -8,28 +8,37 @@
 
 #import <Foundation/Foundation.h>
 #import "MNACoreDataService.h"
+#import "MNAStorageService.h"
 
 #import "MNAMember+CoreDataClass.h"
 #import "MNAWish+CoreDataClass.h"
 
-@protocol MNAAdventureServiceProtocol
+@class MNAAdventureItem;
+
+@protocol MNAAdventureDataProtocol
+
+/*
+ Создает новое приключение в CoreData
+ */
+- (MNAAdventure *) createAdventure;
+
+/*
+ Возвращает все приключения из CoreData
+ */
+- (NSArray<MNAAdventure *> *) adventures;
+
+@end
+
+@protocol MNAAdventureServiceProtocol <MNAAdventureDataProtocol, MNASavableProtocol>
 
 @property (nonatomic, strong) MNAMember *me;
-
-/*
- Возвращает список выбранных желаний для участника
- */
-- (NSArray<MNAWish *> *) selectedWishesForMember: (MNAMember *)member;
-
-/*
- Возвращает список доступных желаний для участника
- */
-- (NSArray<MNAWish *> *) availableWishesForMember: (id)member;
+@property (nonatomic, strong) NSArray *summary;
 
 @end
 
 @interface MNAAdventureService : NSObject <MNAAdventureServiceProtocol>
 
-- (instancetype) initWithCoreDataService: (MNACoreDataService *)coreDataService;
+- (instancetype) initWithCoreDataService: (id<MNACoreDataServiceProtocol>) coreDataService
+                          StorageService: (id<MNAStorageServiceProtocol>) storageService;
 
 @end

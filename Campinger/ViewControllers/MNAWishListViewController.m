@@ -9,12 +9,15 @@
 #import "MNAWishListViewController.h"
 #import "MNAWishCollectionViewCell.h"
 #import "MNAChoosePeriodViewController.h"
+#import "MNAAdventureSummaryViewController.h"
 
 static int const columnsInCollectionView = 2;
 
 @interface MNAWishListViewController ()
 
-@property (nonatomic, strong) id<MNAAdventureServiceProtocol> adventureService;
+@property (nonatomic, weak) MNAAssembly *assembly;
+
+@property (nonatomic, strong) id<MNAWishesServiceProtocol> wishesService;
 
 @property (nonatomic, strong) MNAMember *currentMember;
 @property (nonatomic, strong) NSArray<MNAWish *> *wishes;
@@ -26,30 +29,18 @@ static int const columnsInCollectionView = 2;
 
 @implementation MNAWishListViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"WishCell";
 
-- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
-                                ForMember: (MNAMember *)member
+- (instancetype) initWithAssembly: (MNAAssembly *) assembly
+                    WishesService: (id<MNAWishesServiceProtocol>) wishesService
+                        ForMember: (MNAMember *)member
 {
     if (self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]])
     {
-        _adventureService = adventureService;
+        _assembly = assembly;
+        _wishesService = wishesService;
         _currentMember = member;
-        _wishes = [_adventureService availableWishesForMember:_currentMember];
-
-        _nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"далее"
-                                                          style:UIBarButtonItemStylePlain
-                                                         target:self
-                                                         action:@selector(p_nextButtonClick)];
     }
-    return self;
-}
-
-- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
-{
-    MNAMember *member = [MNAMember new];
-    member.name = @"me";
-    self = [self initWithAdventureService:adventureService ForMember:member];
     return self;
 }
 
@@ -67,57 +58,73 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[MNAWishCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    self.nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"далее"
+                                                      style:UIBarButtonItemStylePlain
+                                                     target:self
+                                                     action:@selector(p_nextButtonClick)];
     self.navigationItem.rightBarButtonItem = self.nextBarButton;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.wishes = [self.wishesService availableWishesForMember:self.currentMember];
+    [self.collectionView reloadData];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [self.wishesService save];
+    
+    [super viewDidDisappear:animated];
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
-    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        
-    } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        [self.collectionViewLayout invalidateLayout];
-        [self.collectionView reloadData];
-    }];
+//    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+//        
+//    } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+//        [self.collectionViewLayout invalidateLayout];
+//        [self.collectionView reloadData];
+//    }];
 }
 
 - (void) p_nextButtonClick
 {
-    MNAChoosePeriodViewController *choosePeriodViewController = [MNAChoosePeriodViewController new];
-    [self.navigationController pushViewController:choosePeriodViewController animated:NO];
+//    MNAChoosePeriodViewController *choosePeriodViewController = [MNAChoosePeriodViewController new];
+//    [self.navigationController pushViewController:choosePeriodViewController animated:NO];
+    [self.navigationController pushViewController:self.assembly.adventureSummaryViewController animated:NO];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-#warning Incomplete implementation, return the number of items
     return self.wishes.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MNAWishCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    MNAWish *wish = self.wishes[indexPath.row];
     
     // Configure the cell
-    MNAWish *wish = self.wishes[indexPath.row];
     cell.name = wish.name;
+    
+    if ([self.currentMember.wishes containsObject:wish])
+    {
+        [cell highlightForSelected];
+    }
+    else
+    {
+        [cell highlightForDeselected];
+    }
     
     return cell;
 }
@@ -147,6 +154,8 @@ static NSString * const reuseIdentifier = @"Cell";
     MNAWishCollectionViewCell *cell = (MNAWishCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     [cell highlightForSelected];
     self.selectedItemsCount++;
+    
+    [self.currentMember addWishesObject:self.wishes[indexPath.row]];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -154,6 +163,11 @@ static NSString * const reuseIdentifier = @"Cell";
     MNAWishCollectionViewCell *cell = (MNAWishCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     [cell highlightForDeselected];
     self.selectedItemsCount--;
+    
+    
+    MNAWish *wish = self.wishes[indexPath.row];
+    [self.currentMember removeWishesObject:wish];
+    [wish removeMembersObject:self.currentMember];
 }
 
 /*

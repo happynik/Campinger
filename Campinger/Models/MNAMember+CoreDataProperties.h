@@ -2,7 +2,7 @@
 //  MNAMember+CoreDataProperties.h
 //  Campinger
 //
-//  Created by Nikita Moiseev on 11.02.2018.
+//  Created by Nikita Moiseev on 13.02.2018.
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 //
@@ -19,12 +19,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSDate *dateFrom;
 @property (nullable, nonatomic, copy) NSDate *dateTo;
 @property (nullable, nonatomic, copy) NSString *name;
-@property (nullable, nonatomic, retain) MNAPlace *places;
+@property (nullable, nonatomic, retain) NSSet<MNAPlace *> *places;
 @property (nullable, nonatomic, retain) NSSet<MNAWish *> *wishes;
 
 @end
 
 @interface MNAMember (CoreDataGeneratedAccessors)
+
+- (void)addPlacesObject:(MNAPlace *)value;
+- (void)removePlacesObject:(MNAPlace *)value;
+- (void)addPlaces:(NSSet<MNAPlace *> *)values;
+- (void)removePlaces:(NSSet<MNAPlace *> *)values;
 
 - (void)addWishesObject:(MNAWish *)value;
 - (void)removeWishesObject:(MNAWish *)value;

@@ -24,7 +24,7 @@
 
 @synthesize persistentContainer = _persistentContainer;
 
-- (NSPersistentContainer *)persistentContainer {
+- (NSPersistentContainer *) persistentContainer {
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
@@ -52,12 +52,24 @@
     return _persistentContainer;
 }
 
+- (NSManagedObjectContext *) context
+{
+    return self.persistentContainer.viewContext;
+}
+
 #pragma mark - Core Data Saving support
 
-- (void)saveContext {
+- (void)save {
     NSManagedObjectContext *context = self.persistentContainer.viewContext;
     NSError *error = nil;
-    if ([context hasChanges] && ![context save:&error]) {
+    BOOL hasChanges = [context hasChanges];
+    if (!hasChanges)
+    {
+        return;
+    }
+    
+    BOOL saveSuccess = [context save:&error];
+    if (!saveSuccess) {
         // Replace this implementation with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
@@ -65,38 +77,9 @@
     }
 }
 
-#pragma mark - Create
-
-- (MNAAdventure *) createAdventure
+- (id) createManageObjectForEntityName: (NSString *) entityName
 {
-    return [self p_createManageObjectFromClass:@"Adventure"];
-}
-
-- (NSArray<MNAAdventure *> *) adventures
-{
-    NSFetchRequest *fetchRequest = [MNAAdventure fetchRequest];
-    //fetchRequest.predicate = [NSPredicate predicateWithFormat:@""];
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
-    fetchRequest.sortDescriptors = @[sortDescriptor];
-    
-    NSError *error = nil;
-    return [self.persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
-}
-
-- (MNAMember *) createMember
-{
-    return [self p_createManageObjectFromClass:@"Member"];
-}
-
-- (MNAWish *) createWish
-{
-    return [self p_createManageObjectFromClass:@"Wish"];
-}
-
-- (id) p_createManageObjectFromClass: (NSString *) entityName
-{
-    return [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.persistentContainer.viewContext];
+    return [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.context];
 }
 
 @end

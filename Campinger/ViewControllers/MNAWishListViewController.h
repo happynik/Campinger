@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MNAAdventureService.h"
+#import "MNAAssembly.h"
+#import "MNAWishesService.h"
 
 @interface MNAWishListViewController : UICollectionViewController
 
-- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
-                                ForMember: (MNAMember *)member NS_DESIGNATED_INITIALIZER;
-
-- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService;
+- (instancetype) initWithAssembly: (MNAAssembly *) assembly
+                    WishesService: (id<MNAWishesServiceProtocol>) wishesService
+                        ForMember: (MNAMember *)member NS_DESIGNATED_INITIALIZER;
 
 @end

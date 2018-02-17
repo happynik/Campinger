@@ -10,11 +10,19 @@
 #import <UIKit/UIKit.h>
 #import "MNACoreDataService.h"
 
+@class MNAWishListViewController;
+@class MNAChoosePeriodViewController;
+@class MNAAdventureSummaryViewController;
+
 @interface MNAAssembly : NSObject
 
 @property (nonatomic, strong) MNACoreDataService *coreDataService;
 
 @property (nonatomic, strong) UIViewController *rootViewController;
+
+@property (readonly, nonatomic, strong) MNAWishListViewController *wishListViewController;
+@property (readonly, nonatomic, strong) MNAChoosePeriodViewController *choosePeriodViewController;
+@property (readonly, nonatomic, strong) MNAAdventureSummaryViewController *adventureSummaryViewController;
 
 /*
  конфигурируем приложение

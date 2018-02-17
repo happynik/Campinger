@@ -8,11 +8,14 @@
 
 #import "MNAAssembly.h"
 #import "MNAAdventureService.h"
+#import "MNAWishesService.h"
 #import "MNAWishListViewController.h"
+#import "MNAAdventureSummaryViewController.h"
 
 @interface MNAAssembly ()
 
 @property (nonatomic, strong) id<MNAAdventureServiceProtocol> adventureService;
+@property (nonatomic, strong) id<MNAWishesServiceProtocol> wishesService;
 
 @end
 
@@ -23,15 +26,28 @@
     if (self = [super init])
     {
         _coreDataService = [MNACoreDataService new];
-        _adventureService = [[MNAAdventureService alloc] initWithCoreDataService:_coreDataService];
+        MNAStorageService* storageService = [MNAStorageService new];
+        _adventureService = [[MNAAdventureService alloc] initWithCoreDataService:_coreDataService StorageService:storageService];
+        _wishesService = [[MNAWishesService alloc] initWitchCoreDataService:_coreDataService];
     }
     return self;
 }
 
+- (MNAWishListViewController *) wishListViewController
+{
+    return [[MNAWishListViewController alloc] initWithAssembly:self
+                                                 WishesService:self.wishesService
+                                                     ForMember:self.adventureService.me];
+}
+
+- (MNAAdventureSummaryViewController *) adventureSummaryViewController
+{
+    return [[MNAAdventureSummaryViewController alloc] initWithAdventureService:_adventureService];
+}
+
 - (instancetype) configureIsNavigationBar: (BOOL)isNavigationBar
 {
-    MNAWishListViewController *startViewController = [[MNAWishListViewController alloc] initWithAdventureService:self.adventureService
-                                                      ForMember:self.adventureService.me];
+    MNAWishListViewController *startViewController = self.wishListViewController;
     self.rootViewController = isNavigationBar
         ? [[UINavigationController alloc] initWithRootViewController:startViewController]
         : startViewController;

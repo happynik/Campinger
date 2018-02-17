@@ -11,29 +11,30 @@
 
 @class MNAAdventure;
 @class MNAMember;
-@class MNAWish;
 
-@interface MNACoreDataService : NSObject
-
-/*
- Создает новое приключение в CoreData
- */
-- (MNAAdventure *) createAdventure;
-/*
- Возвращает все приключения из CoreData
- */
-- (NSArray<MNAAdventure *> *) adventures;
+@protocol MNAMemberDataProtocol
 
 /*
  Создает нового участника приключения в CoreData
  */
 - (MNAMember *) createMember;
 
-/*
- Создает новое желание в CoreData
- */
-- (MNAWish *) createWish;
+@end
 
-- (void)saveContext;
+@protocol MNASavableProtocol
+
+- (void) save;
+
+@end
+
+@protocol MNACoreDataServiceProtocol <MNASavableProtocol>
+
+- (NSManagedObjectContext *) context;
+
+- (id) createManageObjectForEntityName: (NSString *) entityName;
+
+@end
+
+@interface MNACoreDataService : NSObject <MNACoreDataServiceProtocol>
 
 @end
