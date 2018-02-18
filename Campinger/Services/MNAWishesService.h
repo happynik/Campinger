@@ -12,7 +12,7 @@
 @class MNAWish;
 @class MNAMember;
 
-@protocol MNAWishesServiceProtocol <MNASavableProtocol>
+@protocol MNAWishesServiceProtocol <MNASavingProtocol>
 
 /*
  Создает новое желание в CoreData

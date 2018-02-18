@@ -9,6 +9,7 @@
         <attribute name="begin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -32,7 +33,7 @@
     </entity>
     <elements>
         <element name="Adventure" positionX="-243" positionY="-144" width="110" height="90"/>
-        <element name="AdventureItem" positionX="-11" positionY="45" width="128" height="118"/>
+        <element name="AdventureItem" positionX="-11" positionY="45" width="128" height="133"/>
         <element name="Member" positionX="-477" positionY="117" width="128" height="118"/>
         <element name="Place" positionX="-612" positionY="324" width="128" height="103"/>
         <element name="Wish" positionX="-333" positionY="324" width="128" height="90"/>

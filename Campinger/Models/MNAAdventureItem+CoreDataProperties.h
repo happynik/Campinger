@@ -2,7 +2,7 @@
 //  MNAAdventureItem+CoreDataProperties.h
 //  Campinger
 //
-//  Created by Nikita Moiseev on 13.02.2018.
+//  Created by Nikita Moiseev on 18.02.2018.
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 //
@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSDate *end;
 @property (nullable, nonatomic, copy) NSString *title;
 @property (nullable, nonatomic, copy) NSString *type;
+@property (nonatomic) int32_t priority;
 
 @end
 

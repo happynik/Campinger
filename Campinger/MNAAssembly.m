@@ -8,6 +8,7 @@
 
 #import "MNAAssembly.h"
 #import "MNAAdventureService.h"
+#import "MNAAdvantureFacade.h"
 #import "MNAWishesService.h"
 #import "MNAWishListViewController.h"
 #import "MNAAdventureSummaryViewController.h"
@@ -27,7 +28,10 @@
     {
         _coreDataService = [MNACoreDataService new];
         MNAStorageService* storageService = [MNAStorageService new];
-        _adventureService = [[MNAAdventureService alloc] initWithCoreDataService:_coreDataService StorageService:storageService];
+        
+        MNAAdvantureFacade *adventureFacade = [[MNAAdvantureFacade alloc] initWithCoreDataService:_coreDataService
+                                                                                   storageService:storageService];
+        _adventureService = [[MNAAdventureService alloc] initWithAdventureFacade:adventureFacade];
         _wishesService = [[MNAWishesService alloc] initWitchCoreDataService:_coreDataService];
     }
     return self;

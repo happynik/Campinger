@@ -21,13 +21,13 @@
 
 @end
 
-@protocol MNASavableProtocol
+@protocol MNASavingProtocol
 
 - (void) save;
 
 @end
 
-@protocol MNACoreDataServiceProtocol <MNASavableProtocol>
+@protocol MNACoreDataServiceProtocol <MNASavingProtocol>
 
 - (NSManagedObjectContext *) context;
 

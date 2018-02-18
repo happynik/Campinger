@@ -7,6 +7,7 @@
 //
 
 #import "MNAAdventureSummaryViewController.h"
+#import "MNAAdventureItem+CoreDataClass.h"
 
 @interface MNAAdventureSummaryViewController ()
 
@@ -30,6 +31,9 @@ static NSString * const AdventureItemReuseIdentifier = @"AdventureItemCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.adventureService loadSummaryWithBlock:^{
+        //
+    }];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -62,7 +66,8 @@ static NSString * const AdventureItemReuseIdentifier = @"AdventureItemCell";
     }
     
     // Configure the cell...
-    cell.textLabel.text = @"test";
+    MNAAdventureItem *item = self.adventureService.summary[indexPath.row];
+    cell.textLabel.text = item.title;
     
     return cell;
 }

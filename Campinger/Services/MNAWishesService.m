@@ -74,7 +74,7 @@
     return @[surf, snownboard];
 }
 
-#pragma mark - MNASavableProtocol
+#pragma mark - MNASavingProtocol
 
 - (void) save
 {

@@ -10,9 +10,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+typedef NS_ENUM(NSInteger, MNAAdventureItemStyle){
+    MNAAdventureItemStyleNone,
+    MNAAdventureItemStyleFly,
+    MNAAdventureItemStyleTransfer,
+    MNAAdventureItemStylePlace
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MNAAdventureItem : NSManagedObject
+
+- (void) parseFromJson: (NSDictionary *)json;
+
+@property (nonatomic, assign) MNAAdventureItemStyle style;
 
 @end
 

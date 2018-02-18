@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MNACoreDataService.h"
-#import "MNAStorageService.h"
+#import "MNAAdvantureFacade.h"
 
 #import "MNAMember+CoreDataClass.h"
 #import "MNAWish+CoreDataClass.h"
@@ -29,16 +28,17 @@
 
 @end
 
-@protocol MNAAdventureServiceProtocol <MNAAdventureDataProtocol, MNASavableProtocol>
+@protocol MNAAdventureServiceProtocol <MNASavingProtocol>
 
 @property (nonatomic, strong) MNAMember *me;
-@property (nonatomic, strong) NSArray *summary;
+
+@property (nonatomic, strong) NSArray<MNAAdventureItem *> *summary;
+- (void) loadSummaryWithBlock: (void (^)(void))block;
 
 @end
 
 @interface MNAAdventureService : NSObject <MNAAdventureServiceProtocol>
 
-- (instancetype) initWithCoreDataService: (id<MNACoreDataServiceProtocol>) coreDataService
-                          StorageService: (id<MNAStorageServiceProtocol>) storageService;
+- (instancetype) initWithAdventureFacade: (id<MNAAdventureFacadeProtocol>)adventureFacade;
 
 @end
