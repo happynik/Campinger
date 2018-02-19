@@ -59,7 +59,10 @@
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"priority" ascending:NO];
     NSArray *orderedArray = [items sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor,nil]];
     self.summary = orderedArray;
-    block();
+    if (block)
+    {
+        block();
+    }
 }
 
 - (MNAAdventure *)adventure

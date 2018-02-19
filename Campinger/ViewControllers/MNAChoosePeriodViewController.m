@@ -26,10 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self p_setConstraints];
+    [self updateViewConstraints];
 }
 
-- (void)p_setConstraints
+- (void)updateViewConstraints
 {
     UIEdgeInsets padding = UIEdgeInsetsMake(40, 20, 40, 20);
     
@@ -45,6 +45,7 @@
         make.bottom.equalTo(self.view.mas_bottom).with.offset(padding.bottom);
         make.right.equalTo(self.view.mas_right).with.offset(padding.right);
     }];
+    [super updateViewConstraints];
 }
 
 @end

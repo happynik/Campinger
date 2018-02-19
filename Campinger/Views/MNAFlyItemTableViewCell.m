@@ -52,11 +52,11 @@
 - (void)setFlightItem:(MNAAdventureItem *)value
 {
     _flightItem = value;
-    [self p_setLabel:self.fromLabel WithText:@"Вылет: " Date:value.begin];
-    [self p_setLabel:self.toLabel WithText:@"Прилет: " Date:value.end];
+    [self setupLabel:self.fromLabel WithText:@"Вылет: " Date:value.begin];
+    [self setupLabel:self.toLabel WithText:@"Прилет: " Date:value.end];
 }
 
-- (void)p_setLabel:(UILabel *)label WithText:(NSString *)text Date:(NSDate *)date
+- (void)setupLabel:(UILabel *)label WithText:(NSString *)text Date:(NSDate *)date
 {
     if (!date)
     {

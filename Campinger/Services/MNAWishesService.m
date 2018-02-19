@@ -52,12 +52,12 @@
         return fetchResult;
     }
     
-    return [self p_createDefaultWishes];
+    return [self createDefaultWishes];
 }
 
 - (NSArray<MNAWish *> *)selectedWishesForMember: (MNAMember *)member
 {
-    return [member.wishes allObjects];
+    return member.wishes.allObjects;
 }
 
 - (NSArray<MNAWish *> *)availableWishesForMember: (MNAMember *)member
@@ -65,7 +65,7 @@
     return [self allWishes];
 }
 
-- (NSArray<MNAWish *> *)p_createDefaultWishes
+- (NSArray<MNAWish *> *)createDefaultWishes
 {
     NSArray *wishNames = @[
                            @"серфинг",

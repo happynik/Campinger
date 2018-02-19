@@ -43,9 +43,9 @@
     
     NSError *error = nil;
     NSArray<MNAAdventure *> *adventures = [self.coreDataService.context executeFetchRequest:fetchRequest error:&error];
-    if (adventures.count != 0)
+    if (adventures.count > 0)
     {
-        return adventures[0];
+        return adventures.firstObject;
     }
     
     MNAAdventure *newAdventure = [self createAdventure];
@@ -63,7 +63,7 @@
         [adventure addMembersObject:me];
         [self save];
     }
-    return [adventure.members allObjects];
+    return adventure.members.allObjects;
 }
 
 - (NSArray<MNAAdventureItem *> *)itemsForAdventure:(MNAAdventure *)adventure;
@@ -71,7 +71,7 @@
     NSSet<MNAAdventureItem *> *items = adventure.adventureItems;
     if (items.count != 0)
     {
-        return [items allObjects];
+        return items.allObjects;
     }
     
     // тут может быть вытаскиваение из сети
@@ -88,8 +88,7 @@
     }];
     [adventure addAdventureItems:[[NSSet alloc] initWithArray:newItems]];
     [self.coreDataService save];
-    NSArray *r = [adventure.adventureItems allObjects];
-    return r;
+    return adventure.adventureItems.allObjects;
 }
 
 - (void)save

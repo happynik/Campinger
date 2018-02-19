@@ -60,7 +60,7 @@ static NSString * const reuseIdentifier = @"WishCell";
     self.nextBarButton = [[UIBarButtonItem alloc] initWithTitle:@"далее"
                                                       style:UIBarButtonItemStylePlain
                                                      target:self
-                                                     action:@selector(p_nextButtonClick)];
+                                                     action:@selector(nextButtonClick)];
     self.navigationItem.rightBarButtonItem = self.nextBarButton;
 }
 
@@ -78,7 +78,7 @@ static NSString * const reuseIdentifier = @"WishCell";
     [super viewDidDisappear:animated];
 }
 
-- (void)p_nextButtonClick
+- (void)nextButtonClick
 {
     [self.navigationController pushViewController:self.assembly.adventureSummaryViewController animated:YES];
 }
