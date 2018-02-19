@@ -64,14 +64,22 @@
 
 - (NSArray<MNAWish *> *)p_createDefaultWishes
 {
-    MNAWish *surf = [self createWish];
-    surf.name = @"surf";
+    NSArray *wishNames = @[
+                           @"серфинг",
+                           @"сноуборд",
+                           @"виндсерфинг",
+                           @"песочные пляжи",
+                           @"экзотическая еда"
+                           ];
     
-    MNAWish *snownboard = [self createWish];
-    snownboard.name = @"snownboard";
-    
+    NSMutableArray *wishesList = [NSMutableArray new];
+    for (NSString *wishName in wishNames) {
+        MNAWish *wish = [self createWish];
+        wish.name = wishName;
+        [wishesList addObject:wish];
+    }
     [self.coreDataService save];
-    return @[surf, snownboard];
+    return [wishesList copy];
 }
 
 #pragma mark - MNASavingProtocol
