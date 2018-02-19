@@ -23,7 +23,6 @@
 {
     if (self = [super initWithFrame:frame])
     {
-        //_image = [[UIImageView alloc] initWithImage:[UIImage mna_imageNamed:@"surf_default" scaledToSize:CGSizeMake(100, 100)]];
         _image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"surf_default"]];
         [self.contentView addSubview:_image];
         

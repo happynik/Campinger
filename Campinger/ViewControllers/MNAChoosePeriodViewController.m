@@ -24,27 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //self.fromDate = [[UITextField alloc] init];
-//    self.fromDate.layer.borderColor = [UIColor blackColor].CGColor;
-//    self.fromDate.layer.borderWidth = 1;
-//    self.fromDate.layer.cornerRadius = 5.0;
-    //[self.view addSubview:self.fromDate];
-    
-//    self.toDate = [UITextField new];
-//    [self.view addSubview:self.toDate];
-    
     [self p_setConstraints];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (void) p_setConstraints
 {
