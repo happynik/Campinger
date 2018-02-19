@@ -6,12 +6,14 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import "MNAAdvantureFacade.h"
 #import "MNACoreDataService.h"
 #import "MNAStorageService.h"
 #import "MNAAdventure+CoreDataProperties.h"
 #import "MNAAdventureItem+CoreDataClass.h"
 #import "MNAMember+CoreDataProperties.h"
+
 
 @interface MNAAdvantureFacade ()
 
@@ -20,10 +22,10 @@
 
 @end
 
+
 @implementation MNAAdvantureFacade
 
-- (instancetype) initWithCoreDataService: (id<MNACoreDataServiceProtocol>)coreDataService
-                          storageService: (id<MNAStorageServiceProtocol>)storageService;
+- (instancetype)initWithCoreDataService:(id<MNACoreDataServiceProtocol>)coreDataService StorageService:(id<MNAStorageServiceProtocol>)storageService;
 {
     if (self = [super init])
     {
@@ -33,7 +35,7 @@
     return self;
 }
 
-- (MNAAdventure *) adventureForName: (NSString *)name
+- (MNAAdventure *)adventureForName:(NSString *)name
 {
     NSFetchRequest *fetchRequest = [MNAAdventure fetchRequest];
     fetchRequest.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO]];
@@ -51,7 +53,7 @@
     return newAdventure;
 }
 
-- (NSArray<MNAMember *> *) membersForAdventure: (MNAAdventure *)adventure
+- (NSArray<MNAMember *> *)membersForAdventure:(MNAAdventure *)adventure
 {
     NSSet<MNAMember *> *members = adventure.members;
     if (members.count == 0)
@@ -64,7 +66,7 @@
     return [adventure.members allObjects];
 }
 
-- (NSArray<MNAAdventureItem *> *) itemsForAdventure: (MNAAdventure *)adventure;
+- (NSArray<MNAAdventureItem *> *)itemsForAdventure:(MNAAdventure *)adventure;
 {
     NSSet<MNAAdventureItem *> *items = adventure.adventureItems;
     if (items.count != 0)
@@ -90,19 +92,19 @@
     return r;
 }
 
-- (void) save
+- (void)save
 {
     [self.coreDataService save];
 }
 
-- (MNAAdventure *) createAdventure
+- (MNAAdventure *)createAdventure
 {
     MNAAdventure *newAdventure = [self.coreDataService createManageObjectForEntityName:@"Adventure"];
     [self save];
     return newAdventure;
 }
 
-- (MNAMember *) createMember
+- (MNAMember *)createMember
 {
     MNAMember *newMember = [self.coreDataService createManageObjectForEntityName:@"Member"];
     [self save];

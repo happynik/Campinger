@@ -6,11 +6,14 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 #import "MNACoreDataService.h"
 
+
 @class MNAWish;
 @class MNAMember;
+
 
 @protocol MNAWishesServiceProtocol <MNASavingProtocol>
 
@@ -33,8 +36,9 @@
 
 @end
 
+
 @interface MNAWishesService : NSObject <MNAWishesServiceProtocol>
 
-- (instancetype) initWitchCoreDataService: (id<MNACoreDataServiceProtocol>)coredataService;
+- (instancetype)initWitchCoreDataService:(id<MNACoreDataServiceProtocol>)coredataService;
 
 @end

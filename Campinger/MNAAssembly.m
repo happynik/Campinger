@@ -6,12 +6,14 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import "MNAAssembly.h"
 #import "MNAAdventureService.h"
 #import "MNAAdvantureFacade.h"
 #import "MNAWishesService.h"
 #import "MNAWishListViewController.h"
 #import "MNAAdventureSummaryViewController.h"
+
 
 @interface MNAAssembly ()
 
@@ -20,36 +22,36 @@
 
 @end
 
+
 @implementation MNAAssembly
 
-- (instancetype) init
+- (instancetype)init
 {
     if (self = [super init])
     {
         _coreDataService = [MNACoreDataService new];
         MNAStorageService* storageService = [MNAStorageService new];
         
-        MNAAdvantureFacade *adventureFacade = [[MNAAdvantureFacade alloc] initWithCoreDataService:_coreDataService
-                                                                                   storageService:storageService];
+        MNAAdvantureFacade *adventureFacade = [[MNAAdvantureFacade alloc] initWithCoreDataService:_coreDataService StorageService:storageService];
         _adventureService = [[MNAAdventureService alloc] initWithAdventureFacade:adventureFacade];
         _wishesService = [[MNAWishesService alloc] initWitchCoreDataService:_coreDataService];
     }
     return self;
 }
 
-- (MNAWishListViewController *) wishListViewController
+- (MNAWishListViewController *)wishListViewController
 {
     return [[MNAWishListViewController alloc] initWithAssembly:self
                                                  WishesService:self.wishesService
                                                      ForMember:self.adventureService.me];
 }
 
-- (MNAAdventureSummaryViewController *) adventureSummaryViewController
+- (MNAAdventureSummaryViewController *)adventureSummaryViewController
 {
     return [[MNAAdventureSummaryViewController alloc] initWithAdventureService:_adventureService];
 }
 
-- (instancetype) configureIsNavigationBar: (BOOL)isNavigationBar
+- (instancetype)configureIsNavigationBar:(BOOL)isNavigationBar
 {
     MNAWishListViewController *startViewController = self.wishListViewController;
     self.rootViewController = isNavigationBar

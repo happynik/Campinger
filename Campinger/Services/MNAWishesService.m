@@ -6,9 +6,11 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import "MNAWishesService.h"
 #import "MNAWish+CoreDataProperties.h"
 #import "MNAMember+CoreDataProperties.h"
+
 
 @interface MNAWishesService ()
 
@@ -16,9 +18,10 @@
 
 @end
 
+
 @implementation MNAWishesService
 
-- (instancetype) initWitchCoreDataService: (id<MNACoreDataServiceProtocol>)coredataService
+- (instancetype)initWitchCoreDataService:(id<MNACoreDataServiceProtocol>)coredataService
 {
     if (self = [super init])
     {
@@ -29,14 +32,14 @@
 
 #pragma mark - MNAWishesServiceProtocol
 
-- (MNAWish *) createWish
+- (MNAWish *)createWish
 {
     MNAWish *newWith = [self.coreDataService createManageObjectForEntityName:@"Wish"];
     [self.coreDataService save];
     return newWith;
 }
 
-- (NSArray *) allWishes
+- (NSArray *)allWishes
 {
     NSFetchRequest *fetchRequest = [MNAWish fetchRequest];
     
@@ -52,12 +55,12 @@
     return [self p_createDefaultWishes];
 }
 
-- (NSArray<MNAWish *> *) selectedWishesForMember: (MNAMember *)member
+- (NSArray<MNAWish *> *)selectedWishesForMember: (MNAMember *)member
 {
     return [member.wishes allObjects];
 }
 
-- (NSArray<MNAWish *> *) availableWishesForMember: (MNAMember *)member
+- (NSArray<MNAWish *> *)availableWishesForMember: (MNAMember *)member
 {
     return [self allWishes];
 }
@@ -84,7 +87,7 @@
 
 #pragma mark - MNASavingProtocol
 
-- (void) save
+- (void)save
 {
     [self.coreDataService save];
 }

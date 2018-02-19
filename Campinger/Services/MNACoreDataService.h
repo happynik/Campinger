@@ -6,11 +6,14 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+
 @class MNAAdventure;
 @class MNAMember;
+
 
 @protocol MNAMemberDataProtocol
 
@@ -21,11 +24,13 @@
 
 @end
 
+
 @protocol MNASavingProtocol
 
 - (void) save;
 
 @end
+
 
 @protocol MNACoreDataServiceProtocol <MNASavingProtocol>
 
@@ -34,6 +39,7 @@
 - (id) createManageObjectForEntityName: (NSString *) entityName;
 
 @end
+
 
 @interface MNACoreDataService : NSObject <MNACoreDataServiceProtocol>
 

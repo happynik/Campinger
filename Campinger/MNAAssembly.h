@@ -6,13 +6,16 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "MNACoreDataService.h"
 
+
 @class MNAWishListViewController;
 @class MNAChoosePeriodViewController;
 @class MNAAdventureSummaryViewController;
+
 
 @interface MNAAssembly : NSObject
 
@@ -27,6 +30,6 @@
 /*
  конфигурируем приложение
  */
-- (instancetype) configureIsNavigationBar: (BOOL)isNavigationBar;
+- (instancetype)configureIsNavigationBar:(BOOL)isNavigationBar;
 
 @end

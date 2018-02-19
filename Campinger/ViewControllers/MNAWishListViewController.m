@@ -6,12 +6,12 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import "MNAWishListViewController.h"
 #import "MNAWishCollectionViewCell.h"
 #import "MNAChoosePeriodViewController.h"
 #import "MNAAdventureSummaryViewController.h"
 
-static int const columnsInCollectionView = 2;
 
 @interface MNAWishListViewController ()
 
@@ -27,13 +27,15 @@ static int const columnsInCollectionView = 2;
 
 @end
 
+
 @implementation MNAWishListViewController
 
+static int const columnsInCollectionView = 2;
 static NSString * const reuseIdentifier = @"WishCell";
 
-- (instancetype) initWithAssembly: (MNAAssembly *) assembly
-                    WishesService: (id<MNAWishesServiceProtocol>) wishesService
-                        ForMember: (MNAMember *)member
+- (instancetype)initWithAssembly:(MNAAssembly *) assembly
+                   WishesService:(id<MNAWishesServiceProtocol>) wishesService
+                       ForMember:(MNAMember *)member
 {
     if (self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]])
     {
@@ -76,7 +78,7 @@ static NSString * const reuseIdentifier = @"WishCell";
     [super viewDidDisappear:animated];
 }
 
-- (void) p_nextButtonClick
+- (void)p_nextButtonClick
 {
     [self.navigationController pushViewController:self.assembly.adventureSummaryViewController animated:YES];
 }

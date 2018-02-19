@@ -6,11 +6,13 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
 @interface UIImage (MNAImageExtensions)
 
-+ (instancetype) mna_imageNamed:(NSString *)named scaledToSize:(CGSize)newSize;
++ (instancetype)mna_imageNamed:(NSString *)named scaledToSize:(CGSize)newSize;
 
 @end

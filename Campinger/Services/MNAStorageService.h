@@ -6,13 +6,16 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
+
 
 @protocol MNAStorageServiceProtocol
 
-- (NSDictionary *) jsonFromFileName: (NSString *)fileName;
+- (NSDictionary *)jsonFromFileName:(NSString *)fileName;
 
 @end
+
 
 @interface MNAStorageService : NSObject <MNAStorageServiceProtocol>
 

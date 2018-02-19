@@ -21,9 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MNAAdventureItem : NSManagedObject
 
-- (void) parseFromJson: (NSDictionary *)json;
-
 @property (nonatomic, assign) MNAAdventureItemStyle style;
+
+- (void)parseFromJson:(NSDictionary *)json;
 
 @end
 

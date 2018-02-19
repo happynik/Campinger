@@ -6,11 +6,13 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import "MNAStorageService.h"
+
 
 @implementation MNAStorageService
 
-- (NSDictionary *) jsonFromFileName: (NSString *)fileName
+- (NSDictionary *)jsonFromFileName:(NSString *)fileName
 {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];

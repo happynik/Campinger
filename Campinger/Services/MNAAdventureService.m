@@ -6,9 +6,11 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import "MNAAdventureService.h"
 #import "MNAAdventure+CoreDataProperties.h"
 #import "MNAAdventureItem+CoreDataClass.h"
+
 
 @interface MNAAdventureService ()
 
@@ -17,9 +19,10 @@
 
 @end
 
+
 @implementation MNAAdventureService
 
-- (instancetype) initWithAdventureFacade: (id<MNAAdventureFacadeProtocol>)adventureFacade;
+- (instancetype)initWithAdventureFacade:(id<MNAAdventureFacadeProtocol>)adventureFacade;
 {
     if (self = [super init])
     {
@@ -30,7 +33,7 @@
 
 #pragma mark - MNASavedableProtocol
 
-- (void) save
+- (void)save
 {
     [self.adventureFacade save];
 }
@@ -50,7 +53,7 @@
 
 @synthesize summary;
 
-- (void) loadSummaryWithBlock: (void (^)(void))block
+- (void)loadSummaryWithBlock:(void (^)(void))block
 {
     NSArray *items = [self.adventureFacade itemsForAdventure:self.adventure];
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"priority" ascending:NO];
@@ -59,7 +62,7 @@
     block();
 }
 
-- (MNAAdventure *) adventure
+- (MNAAdventure *)adventure
 {
     if (!_adventure)
     {

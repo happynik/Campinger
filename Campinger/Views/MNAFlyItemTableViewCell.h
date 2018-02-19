@@ -6,9 +6,12 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 
+
 @class MNAAdventureItem;
+
 
 @interface MNAFlyItemTableViewCell : UITableViewCell
 

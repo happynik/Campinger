@@ -6,10 +6,11 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import "MNAAdventureSummaryViewController.h"
 #import "MNAFlyItemTableViewCell.h"
-
 #import "MNAAdventureItem+CoreDataClass.h"
+
 
 @interface MNAAdventureSummaryViewController ()
 
@@ -17,12 +18,13 @@
 
 @end
 
+
 @implementation MNAAdventureSummaryViewController
 
 static NSString * const AdventureItemReuseIdentifier = @"AdventureItemCell";
 static NSString * const AdventureFlyReuseIdentifier = @"AdventureFlyCell";
 
-- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
+- (instancetype)initWithAdventureService:(id<MNAAdventureServiceProtocol>)adventureService
 {
     if (self = [super initWithStyle:UITableViewStylePlain])
     {
@@ -31,7 +33,8 @@ static NSString * const AdventureFlyReuseIdentifier = @"AdventureFlyCell";
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self.adventureService loadSummaryWithBlock:^{
@@ -51,15 +54,18 @@ static NSString * const AdventureFlyReuseIdentifier = @"AdventureFlyCell";
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return self.adventureService.summary.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     MNAAdventureItem *item = self.adventureService.summary[indexPath.row];
     if (item.style == MNAAdventureItemStyleFly)
     {

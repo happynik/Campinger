@@ -6,11 +6,13 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 #import "MNAAdventureService.h"
 
+
 @interface MNAAdventureSummaryViewController : UITableViewController
 
-- (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService;
+- (instancetype)initWithAdventureService:(id<MNAAdventureServiceProtocol>)adventureService;
 
 @end

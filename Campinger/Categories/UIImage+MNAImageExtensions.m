@@ -6,11 +6,13 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
+
 #import "UIImage+MNAImageExtensions.h"
+
 
 @implementation UIImage (MNAImageExtensions)
 
-+ (instancetype) mna_imageNamed:(NSString *)named scaledToSize:(CGSize)newSize
++ (instancetype)mna_imageNamed:(NSString *)named scaledToSize:(CGSize)newSize
 {
     UIImage *image = [UIImage imageNamed:named];
     //UIGraphicsBeginImageContext(newSize);

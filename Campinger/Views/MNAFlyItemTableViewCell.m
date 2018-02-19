@@ -6,10 +6,11 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
-#import <Masonry/Masonry.h>
 
+#import <Masonry/Masonry.h>
 #import "MNAFlyItemTableViewCell.h"
 #import "MNAAdventureItem+CoreDataProperties.h"
+
 
 @interface MNAFlyItemTableViewCell ()
 
@@ -21,10 +22,10 @@
 
 @end
 
+
 @implementation MNAFlyItemTableViewCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style
-                         reuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
@@ -48,14 +49,14 @@
 }
 
 @synthesize flightItem = _flightItem;
-- (void) setFlightItem: (MNAAdventureItem *)value
+- (void)setFlightItem:(MNAAdventureItem *)value
 {
     _flightItem = value;
     [self p_setLabel:self.fromLabel WithText:@"Вылет: " Date:value.begin];
     [self p_setLabel:self.toLabel WithText:@"Прилет: " Date:value.end];
 }
 
-- (void)p_setLabel: (UILabel *)label WithText: (NSString *)text Date: (NSDate *)date
+- (void)p_setLabel:(UILabel *)label WithText:(NSString *)text Date:(NSDate *)date
 {
     if (!date)
     {

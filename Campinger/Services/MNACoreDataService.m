@@ -7,10 +7,10 @@
 //
 
 #import "MNACoreDataService.h"
-
 #import "MNAAdventure+CoreDataClass.h"
 #import "MNAMember+CoreDataClass.h"
 #import "MNAWish+CoreDataClass.h"
+
 
 @interface MNACoreDataService ()
 
@@ -18,13 +18,14 @@
 
 @end
 
+
 @implementation MNACoreDataService
 
 #pragma mark - Core Data stack
 
 @synthesize persistentContainer = _persistentContainer;
-
-- (NSPersistentContainer *) persistentContainer {
+- (NSPersistentContainer *)persistentContainer
+{
     @synchronized (self) {
         if (_persistentContainer == nil) {
             _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Campinger"];
@@ -40,14 +41,15 @@
     return _persistentContainer;
 }
 
-- (NSManagedObjectContext *) context
+- (NSManagedObjectContext *)context
 {
     return self.persistentContainer.viewContext;
 }
 
 #pragma mark - Core Data Saving support
 
-- (void)save {
+- (void)save
+{
     NSManagedObjectContext *context = self.persistentContainer.viewContext;
     NSError *error = nil;
     BOOL hasChanges = [context hasChanges];
@@ -63,7 +65,7 @@
     }
 }
 
-- (id) createManageObjectForEntityName: (NSString *) entityName
+- (id)createManageObjectForEntityName:(NSString *)entityName
 {
     return [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.context];
 }

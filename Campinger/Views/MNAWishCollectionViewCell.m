@@ -5,10 +5,12 @@
 //  Created by Nikita Moiseev on 06.02.2018.
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
-#import <Masonry/Masonry.h>
 
+
+#import <Masonry/Masonry.h>
 #import "MNAWishCollectionViewCell.h"
 #import "UIImage+MNAImageExtensions.h"
+
 
 @interface MNAWishCollectionViewCell ()
 
@@ -17,9 +19,10 @@
 
 @end
 
+
 @implementation MNAWishCollectionViewCell
 
-- (instancetype) initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame])
     {
@@ -37,23 +40,23 @@
     return self;
 }
 
-- (void) setName:(NSString *)name
+- (void)setName:(NSString *)name
 {
     _name = name;
     _nameLabel.text = _name;
 }
 
-- (void) highlightForSelected
+- (void)highlightForSelected
 {
     self.backgroundColor = [UIColor blueColor];
 }
 
-- (void) highlightForDeselected
+- (void)highlightForDeselected
 {
     self.backgroundColor = [UIColor whiteColor];
 }
 
-- (void) updateConstraints
+- (void)updateConstraints
 {
     UIEdgeInsets imagePadding = UIEdgeInsetsMake(10, 10, 10, 10);
     [_image mas_makeConstraints:^(MASConstraintMaker *make) {

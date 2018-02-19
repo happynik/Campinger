@@ -6,9 +6,10 @@
 //  Copyright © 2018 Nikita Moiseev. All rights reserved.
 //
 
-#import <Masonry/Masonry.h>
 
+#import <Masonry/Masonry.h>
 #import "MNAChoosePeriodViewController.h"
+
 
 @interface MNAChoosePeriodViewController ()
 
@@ -16,6 +17,7 @@
 @property (nonatomic, strong) UITextField *toDate;
 
 @end
+
 
 @implementation MNAChoosePeriodViewController
 
@@ -27,7 +29,7 @@
     [self p_setConstraints];
 }
 
-- (void) p_setConstraints
+- (void)p_setConstraints
 {
     UIEdgeInsets padding = UIEdgeInsetsMake(40, 20, 40, 20);
     

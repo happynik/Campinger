@@ -12,7 +12,7 @@
 @implementation MNAAdventureItem
 
 @synthesize style = _style;
-- (MNAAdventureItemStyle) style
+- (MNAAdventureItemStyle)style
 {
     if (_style != 0)
     {
