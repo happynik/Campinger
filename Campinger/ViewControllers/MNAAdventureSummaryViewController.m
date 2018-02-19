@@ -7,6 +7,8 @@
 //
 
 #import "MNAAdventureSummaryViewController.h"
+#import "MNAFlyItemTableViewCell.h"
+
 #import "MNAAdventureItem+CoreDataClass.h"
 
 @interface MNAAdventureSummaryViewController ()
@@ -18,6 +20,7 @@
 @implementation MNAAdventureSummaryViewController
 
 static NSString * const AdventureItemReuseIdentifier = @"AdventureItemCell";
+static NSString * const AdventureFlyReuseIdentifier = @"AdventureFlyCell";
 
 - (instancetype) initWithAdventureService: (id<MNAAdventureServiceProtocol>) adventureService
 {
@@ -32,12 +35,13 @@ static NSString * const AdventureItemReuseIdentifier = @"AdventureItemCell";
     [super viewDidLoad];
     
     [self.adventureService loadSummaryWithBlock:^{
-        //
+        // скрыть прогресс бар
     }];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:AdventureItemReuseIdentifier];
+    [self.tableView registerClass:[MNAFlyItemTableViewCell class] forCellReuseIdentifier:AdventureFlyReuseIdentifier];
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -45,7 +49,7 @@ static NSString * const AdventureItemReuseIdentifier = @"AdventureItemCell";
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.hidden = YES;
+    //self.navigationController.navigationBar.hidden = YES;
 }
 
 #pragma mark - Table view data source
@@ -59,16 +63,25 @@ static NSString * const AdventureItemReuseIdentifier = @"AdventureItemCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MNAAdventureItem *item = self.adventureService.summary[indexPath.row];
+    if (item.style == MNAAdventureItemStyleFly)
+    {
+        MNAFlyItemTableViewCell *flyCell = [tableView dequeueReusableCellWithIdentifier:AdventureFlyReuseIdentifier forIndexPath:indexPath];
+        if (!flyCell)
+        {
+            flyCell = [[MNAFlyItemTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
+                                                    reuseIdentifier:AdventureFlyReuseIdentifier];
+        }
+        flyCell.flightItem = item;
+        return flyCell;
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AdventureItemReuseIdentifier forIndexPath:indexPath];
     if (!cell)
     {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AdventureItemReuseIdentifier];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AdventureFlyReuseIdentifier];
     }
-    
-    // Configure the cell...
-    MNAAdventureItem *item = self.adventureService.summary[indexPath.row];
     cell.textLabel.text = item.title;
-    
     return cell;
 }
 

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class MNAAdventureItem;
+
 @interface MNAFlyItemTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) MNAAdventureItem *flightItem;
 
 @end

@@ -93,7 +93,7 @@ static NSString * const reuseIdentifier = @"WishCell";
 {
 //    MNAChoosePeriodViewController *choosePeriodViewController = [MNAChoosePeriodViewController new];
 //    [self.navigationController pushViewController:choosePeriodViewController animated:NO];
-    [self.navigationController pushViewController:self.assembly.adventureSummaryViewController animated:NO];
+    [self.navigationController pushViewController:self.assembly.adventureSummaryViewController animated:YES];
 }
 
 #pragma mark <UICollectionViewDataSource>

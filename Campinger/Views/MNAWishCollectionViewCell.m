@@ -32,7 +32,7 @@
         _nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:_nameLabel];
         
-        [self p_setConstraintsWithFrame:frame];
+        [self updateConstraints];
     }
     
     return self;
@@ -54,7 +54,7 @@
     self.backgroundColor = [UIColor whiteColor];
 }
 
-- (void) p_setConstraintsWithFrame: (CGRect)frame
+- (void) updateConstraints
 {
     UIEdgeInsets imagePadding = UIEdgeInsetsMake(10, 10, 10, 10);
     [_image mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -66,6 +66,8 @@
         make.top.equalTo(_image.mas_top).with.offset(labelPadding.top);
         make.left.equalTo(_image.mas_left).with.offset(labelPadding.left);
     }];
+    
+    [super updateConstraints];
 }
 
 @end

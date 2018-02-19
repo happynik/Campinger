@@ -11,7 +11,7 @@
 #import <CoreData/CoreData.h>
 
 typedef NS_ENUM(NSInteger, MNAAdventureItemStyle){
-    MNAAdventureItemStyleNone,
+    MNAAdventureItemStyleNone = 1,
     MNAAdventureItemStyleFly,
     MNAAdventureItemStyleTransfer,
     MNAAdventureItemStylePlace
