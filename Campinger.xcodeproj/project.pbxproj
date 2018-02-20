@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1EDED6CBDE64EAACF139ADEE /* libPods-Campinger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 420FBD8A19692F0D6AAC8A42 /* libPods-Campinger.a */; };
 		315D873022E5A4F5766758D4 /* libPods-CampingerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A15179749B29AE854BF7665 /* libPods-CampingerUITests.a */; };
+		6B2D5FD0203B82C500886DAC /* MNAFlickrService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D5FCF203B82C500886DAC /* MNAFlickrService.m */; };
+		6B2D5FD3203B8D8C00886DAC /* MNAPhotosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D5FD2203B8D8C00886DAC /* MNAPhotosModel.m */; };
+		6B2D5FD9203B8E1C00886DAC /* MNAPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D5FD8203B8E1C00886DAC /* MNAPhotoModel.m */; };
+		6B2D5FDC203BA47B00886DAC /* NSString+MNAStringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D5FDB203BA47B00886DAC /* NSString+MNAStringExtensions.m */; };
 		6B39E262202EDF90008EEE49 /* MNAChoosePeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B39E261202EDF90008EEE49 /* MNAChoosePeriodViewController.m */; };
 		6B76DF9420325C8200EF3EA8 /* MNAAdventure+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B76DF8220325C8200EF3EA8 /* MNAAdventure+CoreDataClass.m */; };
 		6B76DF9520325C8200EF3EA8 /* MNAAdventure+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B76DF8320325C8200EF3EA8 /* MNAAdventure+CoreDataProperties.m */; };
@@ -64,6 +68,14 @@
 		1B3A194F973A59BE7644916E /* Pods-CampingerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampingerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampingerTests/Pods-CampingerTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D70FE6D49EC6A0E4AF3ACA6 /* Pods-Campinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Campinger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Campinger/Pods-Campinger.release.xcconfig"; sourceTree = "<group>"; };
 		420FBD8A19692F0D6AAC8A42 /* libPods-Campinger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Campinger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2D5FCE203B82C500886DAC /* MNAFlickrService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAFlickrService.h; sourceTree = "<group>"; };
+		6B2D5FCF203B82C500886DAC /* MNAFlickrService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAFlickrService.m; sourceTree = "<group>"; };
+		6B2D5FD1203B8D8C00886DAC /* MNAPhotosModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAPhotosModel.h; sourceTree = "<group>"; };
+		6B2D5FD2203B8D8C00886DAC /* MNAPhotosModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAPhotosModel.m; sourceTree = "<group>"; };
+		6B2D5FD7203B8E1C00886DAC /* MNAPhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAPhotoModel.h; sourceTree = "<group>"; };
+		6B2D5FD8203B8E1C00886DAC /* MNAPhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAPhotoModel.m; sourceTree = "<group>"; };
+		6B2D5FDA203BA47B00886DAC /* NSString+MNAStringExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MNAStringExtensions.h"; sourceTree = "<group>"; };
+		6B2D5FDB203BA47B00886DAC /* NSString+MNAStringExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MNAStringExtensions.m"; sourceTree = "<group>"; };
 		6B39E260202EDF90008EEE49 /* MNAChoosePeriodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAChoosePeriodViewController.h; sourceTree = "<group>"; };
 		6B39E261202EDF90008EEE49 /* MNAChoosePeriodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAChoosePeriodViewController.m; sourceTree = "<group>"; };
 		6B76DF8020325C8200EF3EA8 /* MNAAdventure+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNAAdventure+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -179,6 +191,10 @@
 				6B76DF9120325C8200EF3EA8 /* MNAWish+CoreDataClass.h */,
 				6B76DF9220325C8200EF3EA8 /* MNAWish+CoreDataClass.m */,
 				6B76DF9320325C8200EF3EA8 /* MNAWish+CoreDataProperties.m */,
+				6B2D5FD1203B8D8C00886DAC /* MNAPhotosModel.h */,
+				6B2D5FD2203B8D8C00886DAC /* MNAPhotosModel.m */,
+				6B2D5FD7203B8E1C00886DAC /* MNAPhotoModel.h */,
+				6B2D5FD8203B8E1C00886DAC /* MNAPhotoModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +215,8 @@
 			children = (
 				6BC46ED320296EA800F5C897 /* UIImage+MNAImageExtensions.h */,
 				6BC46ED420296EA800F5C897 /* UIImage+MNAImageExtensions.m */,
+				6B2D5FDA203BA47B00886DAC /* NSString+MNAStringExtensions.h */,
+				6B2D5FDB203BA47B00886DAC /* NSString+MNAStringExtensions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -290,6 +308,8 @@
 				6B76DFAD2038634B00EF3EA8 /* MNAStorageService.m */,
 				6B76DFB22039943900EF3EA8 /* MNAAdvantureFacade.h */,
 				6B76DFB32039943900EF3EA8 /* MNAAdvantureFacade.m */,
+				6B2D5FCE203B82C500886DAC /* MNAFlickrService.h */,
+				6B2D5FCF203B82C500886DAC /* MNAFlickrService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -609,6 +629,7 @@
 				6B76DF9D20325C8200EF3EA8 /* MNAWish+CoreDataProperties.m in Sources */,
 				6B76DF9620325C8200EF3EA8 /* MNAAdventureItem+CoreDataClass.m in Sources */,
 				6BCB7CFF2017E4DF00E39770 /* Campinger.xcdatamodeld in Sources */,
+				6B2D5FDC203BA47B00886DAC /* NSString+MNAStringExtensions.m in Sources */,
 				6BC46ED520296EA800F5C897 /* UIImage+MNAImageExtensions.m in Sources */,
 				6B76DFB12038BB5B00EF3EA8 /* MNAFlyItemTableViewCell.m in Sources */,
 				6B76DFA82037E5A200EF3EA8 /* MNAWishesService.m in Sources */,
@@ -616,12 +637,15 @@
 				6B76DF9920325C8200EF3EA8 /* MNAPlace+CoreDataProperties.m in Sources */,
 				6B938494202F4F5900975A6D /* MNAAdventureService.m in Sources */,
 				6B938491202F4D7900975A6D /* MNACoreDataService.m in Sources */,
+				6B2D5FD3203B8D8C00886DAC /* MNAPhotosModel.m in Sources */,
 				6B76DF9C20325C8200EF3EA8 /* MNAWish+CoreDataClass.m in Sources */,
+				6B2D5FD9203B8E1C00886DAC /* MNAPhotoModel.m in Sources */,
 				6BC46ECD202799CC00F5C897 /* MNAWishListViewController.m in Sources */,
 				6BC46ED12029577000F5C897 /* MNAWishCollectionViewCell.m in Sources */,
 				6BCB7D072017E4DF00E39770 /* main.m in Sources */,
 				6B76DF9520325C8200EF3EA8 /* MNAAdventure+CoreDataProperties.m in Sources */,
 				6B76DF9A20325C8200EF3EA8 /* MNAMember+CoreDataClass.m in Sources */,
+				6B2D5FD0203B82C500886DAC /* MNAFlickrService.m in Sources */,
 				6B39E262202EDF90008EEE49 /* MNAChoosePeriodViewController.m in Sources */,
 				6B76DFA32032AA0000EF3EA8 /* MNAAdventureSummaryViewController.m in Sources */,
 				6BD6411A20229849000C0B7A /* MNAAssembly.m in Sources */,

@@ -11,6 +11,7 @@
 #import "MNAWishCollectionViewCell.h"
 #import "MNAChoosePeriodViewController.h"
 #import "MNAAdventureSummaryViewController.h"
+#import "MNAPhotoModel.h"
 
 
 @interface MNAWishListViewController ()
@@ -18,6 +19,7 @@
 @property (nonatomic, weak) MNAAssembly *assembly;
 
 @property (nonatomic, strong) id<MNAWishesServiceProtocol> wishesService;
+@property (nonatomic, strong) MNAFlickrService *flickrService;
 
 @property (nonatomic, strong) MNAMember *currentMember;
 @property (nonatomic, strong) NSArray<MNAWish *> *wishes;
@@ -35,12 +37,14 @@ static NSString * const reuseIdentifier = @"WishCell";
 
 - (instancetype)initWithAssembly:(MNAAssembly *) assembly
                    WishesService:(id<MNAWishesServiceProtocol>) wishesService
+                   FlickrService:(MNAFlickrService *) flickrService
                        ForMember:(MNAMember *)member
 {
     if (self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]])
     {
         _assembly = assembly;
         _wishesService = wishesService;
+        _flickrService = flickrService;
         _currentMember = member;
     }
     return self;
@@ -103,6 +107,7 @@ static NSString * const reuseIdentifier = @"WishCell";
     
     cell.name = wish.name;
     
+    cell.selected = [self.currentMember.wishes containsObject:wish];
     if ([self.currentMember.wishes containsObject:wish])
     {
         [cell highlightForSelected];
@@ -112,6 +117,14 @@ static NSString * const reuseIdentifier = @"WishCell";
         [cell highlightForDeselected];
     }
     
+    [self.flickrService photosForText:wish.name WithCompletion:^(NSArray *photos) {
+        MNAPhotoModel *photo = [photos objectAtIndex:10];
+        [self.flickrService imageFromPhoto:photo WithCompletion:^(NSData *imageData) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.image = [UIImage imageWithData:imageData];
+            });
+        }];
+    }];
     return cell;
 }
 

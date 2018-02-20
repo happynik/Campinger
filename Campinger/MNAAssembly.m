@@ -17,6 +17,7 @@
 
 @interface MNAAssembly ()
 
+@property (nonatomic, strong) MNAFlickrService *flickrService;
 @property (nonatomic, strong) id<MNAAdventureServiceProtocol> adventureService;
 @property (nonatomic, strong) id<MNAWishesServiceProtocol> wishesService;
 
@@ -29,6 +30,7 @@
 {
     if (self = [super init])
     {
+        _flickrService = [MNAFlickrService new];
         _coreDataService = [MNACoreDataService new];
         MNAStorageService* storageService = [MNAStorageService new];
         
@@ -43,6 +45,7 @@
 {
     return [[MNAWishListViewController alloc] initWithAssembly:self
                                                  WishesService:self.wishesService
+                                                 FlickrService:self.flickrService
                                                      ForMember:self.adventureService.me];
 }
 

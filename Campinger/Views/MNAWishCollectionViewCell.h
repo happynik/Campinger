@@ -13,6 +13,7 @@
 @interface MNAWishCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) UIImage *image;
 
 - (void)highlightForSelected;
 - (void)highlightForDeselected;

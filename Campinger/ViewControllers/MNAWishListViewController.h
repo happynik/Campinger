@@ -10,12 +10,14 @@
 #import <UIKit/UIKit.h>
 #import "MNAAssembly.h"
 #import "MNAWishesService.h"
+#import "MNAFlickrService.h"
 
 
 @interface MNAWishListViewController : UICollectionViewController
 
 - (instancetype) initWithAssembly:(MNAAssembly *) assembly
                     WishesService:(id<MNAWishesServiceProtocol>) wishesService
+                    FlickrService:(MNAFlickrService *) flickrService
                         ForMember:(MNAMember *)member NS_DESIGNATED_INITIALIZER;
 
 @end
