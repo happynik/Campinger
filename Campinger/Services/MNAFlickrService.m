@@ -20,6 +20,7 @@
     NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig];
     
+    // убрать в plist
     NSString *key = @"4614e1a65e2fdb7896f8cdc243bab31b";
     NSString *secret = @"49d156db4240efba";
     NSString *url = [NSString mna_persentStringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&text=%@&privacy_filter=1&content_type=7&media=photos&format=json&nojsoncallback=1", key, [text stringByReplacingOccurrencesOfString:@" " withString:@""]];
